@@ -11,7 +11,7 @@
 .wave {
     position: absolute;
     height: 70px;
-    min-width: 100%;    
+    min-width: 100%;
     bottom: 30vh;
     background: #2c3e50;
     bottom: 0;
@@ -42,11 +42,10 @@
     margin-top: 0vh;
     position: relative;
     bottom: 25vh;
-    
+
 }
 footer {
     max-height: 36vh;
-    min-width: 100vw;
     background-color: #fafafa;
     position: relative;
     z-index: 1;
@@ -121,7 +120,7 @@ footer {
 .footerBottom > ul > li {
    display: inline;
 }
-.copyright { 
+.copyright {
     background: #1e2b38;
     border-top: 1px solid #415569;
     min-height: 6vh;
@@ -130,7 +129,7 @@ footer {
     margin-top: 2vh;
     color: white;
     font-size: .8rem;
-    font-weight: 350; 
+    font-weight: 350;
 }
 @media only screen and (min-width: 320px) and (max-width: 410px) {
     .container {
@@ -147,7 +146,7 @@ footer {
    }
    .footerBottom > ul > li > a {
        font-size: .9rem;
-   } 
+   }
    .footerBottom {
        top: 3vh;
    }

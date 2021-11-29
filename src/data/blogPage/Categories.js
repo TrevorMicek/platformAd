@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import styles from '../../styles/BlogPage/categories.module.css'
+import styles from '../../styles/BlogPage/categories.css'
 import MainSectionTitle from '../../components/commonComps/MainSectionTitle'
 import CategoryData from '../../data/blogPage/CategoryData'
 

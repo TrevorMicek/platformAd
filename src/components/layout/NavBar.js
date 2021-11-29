@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useShopify } from "../../storePage/hooks"
 
 
-import styles from './navBarStyles.module.css';
+import './navBarStyles.css';
 const hamburger = require('../../images/HamburgerImg.svg')
 const xImg = require('../../images/X.svg')
 const logo = require('../../images/logo.svg')
@@ -26,28 +26,28 @@ const Nav = (props) => {
   ), [])
 //𝕎𝕖𝕓𝕤𝕚𝕥𝕖𝕤 𝔹𝕪 𝕋𝕣𝕖𝕧𝕠𝕣
   return (
-    <nav className={styles.navWrapper}>
-      <div className={styles.leftsideNav}>
-        <p style={{fontFamily: `${props.font}`}} className={styles.logoTitle}>
+    <nav class="navWrapper">
+      <div class="leftsideNav">
+        <p style={{fontFamily: `${props.font}`}} class="logoTitle">
         Websites By Trevor
         </p>
         <img src={logo} alt="black and white landscape with the words Websites By Trevor on it" width="100px" height="75px" />
-        <Link to="/" className={styles.link}>
+        <Link to="/" class="link">
 
         </Link>
       </div>
-        <div className={styles.rightsideNav}>
+        <div class="rightsideNav">
           {isOpen ?
     <>
 
-    <button className={styles.dropDown}  onClick={toggleOpen} onKeyDown={toggleOpen}>
-      <div className={styles.mobileNav}>
+    <button class="dropDown}  onClick={toggleOpen} onKeyDown={toggleOpen">
+      <div class="mobileNav">
           <img src={xImg} alt={"close drop down menu"} width="40px" height="30px" />
         </div>
         </button>
-        <div className={styles.mobileListItems}>
+        <div class="mobileListItems">
 
-          <ul className={styles.mobileNavList}>
+          <ul class="mobileNavList">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/about">About</Link></li>
@@ -57,14 +57,14 @@ const Nav = (props) => {
       </div>
       </> :
       <>
-        <div className={styles.hamburger}>
-          <button className={styles.mobileNav} onClick={toggleOpen} onKeyDown={toggleOpen}>
+        <div class="hamburger">
+          <button class="mobileNav" onClick={toggleOpen} onKeyDown={toggleOpen}>
             <img src={hamburger} alt={"open drop down menu"} width="40px" height="35px" />
            </button>
         </div>
 
-      <div className={styles.listItems}>
-      <ul className={styles.navList}>
+      <div class="listItems">
+      <ul class="navList">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/about">About</Link></li>

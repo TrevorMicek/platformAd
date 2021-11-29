@@ -1,21 +1,21 @@
 import React from 'react';
 
 
-import firstStyles from '../../../styles/FrontPage/headerStyles.module.css';
+import firstStyles from '../../../styles/FrontPage/headerStyles.css';
 const Header = (props) => (
 
-  
-    <section className={firstStyles.headerPictureWrapper}>
 
-    <section className={firstStyles.firstSectionOverlay}></section>
-    <div className={firstStyles.firstTransition}></div>
-      <div className={firstStyles.headerBorder}>
-      <h1 className={firstStyles.headerTitle}>
+    <section class="headerPictureWrapper">
+
+    <section class="firstSectionOverlay"></section>
+    <div class="firstTransition"></div>
+      <div class="headerBorder">
+      <h1 class="headerTitle">
           <span>{props.title}</span>
       </h1>
-      <h2 className={firstStyles.headerText}>Websites By Trevor</h2>
+      <h2 class="headerText">Websites By Trevor</h2>
       </div>
-      
+
     </section>
   )
 export default Header;

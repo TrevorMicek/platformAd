@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import styles from '../../../components/layout/secondaryHeader.module.css';
+import styles from '../../../components/layout/secondaryHeader.css';
 
 const Header = (props) => (
 
@@ -15,7 +15,7 @@ const Header = (props) => (
       </h1>
       <h2 className={styles.headerText}>Websites By Trevor</h2>
       </div>
-      
+
     </section>
   )
 export default Header;

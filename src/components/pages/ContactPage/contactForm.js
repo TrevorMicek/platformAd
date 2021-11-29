@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import styles from '../../../styles/ContactPage/loginPage.module.css'
+import styles from '../../../styles/ContactPage/loginPage.css'
 const xImg = require('../../../images/X.svg')
 const LoginForm = () => {
     const [name, setName] = useState('')
@@ -13,7 +13,7 @@ const LoginForm = () => {
     const [confirmation, setConfirmation] = useState(false)
 
     const confirmed = () => setConfirmation(!confirmation)
-    
+
     const closeConfirmation = () => {
         setConfirmation(!confirmation)
         setEmail('')
@@ -106,7 +106,7 @@ const handleClick = (e) => {
             validateError(message, 'message');
             e.preventDefault()
             break;
-       
+
         default:
            /* setURL() */
            confirmed()
@@ -117,7 +117,7 @@ return (
     <>
     <div className={styles.login}>
         <div className={styles.wrapper}>
-           
+
             <form method="POST" action={sendEmail} onSubmit={handleClick}>
                 <div className={styles.title}>
                     Contact us and we'll get back with you within a week!
@@ -126,7 +126,7 @@ return (
                     {useInput()}
                 </div>
                 <input type="submit" value="send" className={styles.btn} />
-            </form> 
+            </form>
         </div>
     </div>
     {confirmation === true ? <ConfirmationSuccess /> : null}

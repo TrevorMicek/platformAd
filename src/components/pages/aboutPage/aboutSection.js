@@ -1,12 +1,12 @@
 import  React from 'react';
 
-import styles from '../../../styles/AboutPage/mainStyles.module.css'
+import styles from '../../../styles/AboutPage/mainStyles.css'
 const Section = (props) => (
   <div>
-    <h3 className={styles.FirstTitle}>
+    <h3 class="FirstTitle">
       {props.title}
     </h3>
-    <div className={styles.FirstText}>
+    <div class="FirstText">
       <p>{props.firstP}
       {props.secondP}
       {props.thirdP}</p>

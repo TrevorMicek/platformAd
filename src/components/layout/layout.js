@@ -12,9 +12,10 @@ import { Helmet } from "react-helmet";
 
 import NavBar from "./NavBar";
 import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "../tailwindComps/Footer";
+import HeroComp from "../tailwindComps/Hero"
 import createComponent from '../commonComps/createCart'
-import styles from "./layoutGrid.module.css"
+import "./layoutGrid.css"
 import "./layout.css"
 import { useShopify } from "../../storePage/hooks";
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
@@ -54,12 +55,11 @@ const Layout = ({children, title, pageLayout}) => {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
         </Helmet>
-       <div className={styles.grid}>
-        <NavBar font={'Cinzel Decorative'} />
-        <Header title={title}/>
+       <div class="grid">
+        <HeroComp />
 
 
-        <main style={pageLayout}  className={styles.main}>{children}</main>
+        <main style={pageLayout}  class="main">{children}</main>
         <Footer />
        </div>
       </div>

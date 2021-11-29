@@ -1,19 +1,19 @@
 import React from 'react';
 
 
-import styles from '../../../styles/ServicesPage/topBenefits.module.css'
+import styles from '../../../styles/ServicesPage/topBenefits.css'
 const checkmark = require('../../../images/checkmark.jpg')
 const Categories = (props) => (
-  <section className={styles.secondSection}>
+  <section class="secondSection">
     <div>
-    <div className={styles.imgWrapper}>
-     <img src={checkmark} alt="small blue checkmark icon" className={styles.firstGraphic} width="30px" height="30px" />
+    <div class="imgWrapper">
+     <img src={checkmark} alt="small blue checkmark icon" class="firstGraphic" width="30px" height="30px" />
      </div>
-     <div className={styles.serviceWrapper}>
-     <h3 className={styles.SecondSectionTitle}>
+     <div class="serviceWrapper">
+     <h3 class="SecondSectionTitle">
        {props.title}
      </h3>
-     <p className={styles.FirstText}>
+     <p class="FirstText">
       {props.text}
      </p>
      </div>

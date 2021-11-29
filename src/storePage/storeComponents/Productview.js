@@ -5,10 +5,10 @@ import Header from './Header'
 import Layout from '../../components/layout/layout'
 import { useShopify } from "../hooks"
 import { create } from "lodash"
-import styles from '../../styles/StorePage/wrapper.module.css'
+import styles from '../../styles/StorePage/wrapper.css'
 
 export default (props) => {
-	
+
 	const {
 		product,
 		fetchProduct,
@@ -17,7 +17,7 @@ export default (props) => {
 		checkoutState,
 		addVariant,
 	} = useShopify()
-	
+
 	const id = useMatch("/store/products/:productId").productId
 	const defaultSize = product.variants && product.variants[0].id.toString()
 	const [size, setSize] = useState("")
@@ -56,31 +56,31 @@ export default (props) => {
 				add: lineItemsToAdd,
 				onRefresh: lineItemsOnRefresh
 			}
-			addVariant(storage.id, storage.add)	
+			addVariant(storage.id, storage.add)
 			const oldItems = JSON.parse(window.localStorage.getItem('cart')) || []
-			oldItems.push(storage)	
+			oldItems.push(storage)
 			window.localStorage.setItem('cart', JSON.stringify(oldItems))
 			navigate('../')
 		} else {
-		
+
 			const lineItemsToAdd = [
 				{ variantId: sizeId, quantity: parseInt(quantity, 10) },
 			]
-		
-			
+
+
 			const checkoutId = checkoutState.id
 			addVariant(checkoutId, lineItemsToAdd)
 		}
-		
+
 	}
 
 	useEffect(() => {
 		createCheckout()
 		props.button('../../')
-		
+
 		// fetchCollection()
 	}, [])
-	
+
 	useEffect(() => {
 		fetchProduct(id)
 		window.scrollTo(0,0)
@@ -93,8 +93,8 @@ export default (props) => {
 			{props.cart()}
 		<div className={styles.app}>
 		<div id="individualProduct">
-			
-	
+
+
 			<div className="Product-wrapper2">
 				<div className="Images">
 				<button className="leftButton" onClick={leftImg}>{leftArrow}</button>
@@ -115,9 +115,9 @@ export default (props) => {
 				<h3 className="Product__price">
 						${product.variants && product.variants[0].price}
 					</h3>
-					
+
 						<label htmlFor={"prodOptions"}>Size</label><br />
-						
+
 						<select
 							id="prodOptions"
 							name={size}
@@ -125,7 +125,7 @@ export default (props) => {
 								setSize(e.target.value)
 							}}
 						>
-							
+
 							{product.variants &&
 								product.variants.map((item, i) => {
 									return (
@@ -136,7 +136,7 @@ export default (props) => {
 									)
 								})}
 						</select>
-						
+
 					</div>
 					<div>
 						<label className="qtyLabel">Quantity</label><br />
@@ -150,8 +150,8 @@ export default (props) => {
 							}}
 						></input>
 					</div>
-					
-				
+
+
 					<button
 						className="prodBuy button"
 						onClick={(e) => changeSize(size, quantity)}
@@ -160,20 +160,20 @@ export default (props) => {
 					</button>
 					</div>
 				<div className="Product__info">
-					
+
 					<ul className="Product__description">
 						{description &&
 							description.map((each, i) => {
 								return <li key={`line-description +${i}`}>{each}</li>
 							})}
 					</ul>
-					
+
 				</div>
 			</div>
 		</div>
 		</div>
 		</Layout>
 		)
-	
-	
+
+
 }

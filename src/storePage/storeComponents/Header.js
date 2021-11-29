@@ -1,9 +1,9 @@
 import React from 'react';
 
-import storeStyles from '../../styles/StorePage/storeStyles.module.css'
+import storeStyles from '../../styles/StorePage/storeStyles.css'
 
   const Header = (props) => (
-    <section className={storeStyles.headerPictureWrapper}> 
+    <section className={storeStyles.headerPictureWrapper}>
    <div className={storeStyles.headerBorder}>
    <h1 className={storeStyles.headerTitle}>
    {props.title}

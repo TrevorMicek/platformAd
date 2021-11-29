@@ -15,7 +15,7 @@ import "../styles/StorePage/app.css"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import styles from '../styles/StorePage/wrapper.module.css'
+import styles from '../styles/StorePage/wrapper.css'
 
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"

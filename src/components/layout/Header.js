@@ -1,8 +1,8 @@
 import React from 'react';
 
-import storeStyles from '../../styles/StorePage/storeStyles.module.css'
-import secondStyles from './secondaryHeader.module.css';
-import firstStyles from '../../styles/FrontPage/headerStyles.module.css';
+import storeStyles from '../../styles/StorePage/storeStyles.css'
+import secondStyles from './secondaryHeader.css';
+import firstStyles from '../../styles/FrontPage/headerStyles.css';
 const Header = (props) => {
 
   const firstTitle = 'Small Business Web Design & Development'
@@ -17,23 +17,23 @@ const Header = (props) => {
   }
   const secondTitle = getSecondaryTitle(props.title)
   const HomeHeader = () => (
-    <section className={firstStyles.headerPictureWrapper}>
+    <section class="headerPictureWrapper">
 
-    <section className={firstStyles.gradient}></section>
+    <section class="gradient"></section>
 
-      <div className={firstStyles.headerBorder}>
-      <h1 className={firstStyles.headerTitle}>
+      <div class="headerBorder">
+      <h1 class="headerTitle">
           <span>{props.title}</span>
       </h1>
-      <h2 className={firstStyles.headerText}>For retailers & professional services</h2>
+      <h2 class="headerText">For retailers & professional services</h2>
       </div>
 
     </section>
   )
   const SecondaryHeader = () => (
-    <section className={secondStyles.headerPictureWrapper}>
-   <div className={secondStyles.headerBorder}>
-   <h1 className={secondStyles.headerTitle}>
+    <section class="headerPictureWrapper">
+   <div class="headerBorder">
+   <h1 class="headerTitle">
    {props.title}
    </h1>
 
@@ -41,9 +41,9 @@ const Header = (props) => {
    </section>
   )
   const StoreHeader = () => (
-    <section className={storeStyles.headerPictureWrapper}>
-   <div className={storeStyles.headerBorder}>
-   <h1 className={storeStyles.headerTitle}>
+    <section class="headerPictureWrapper">
+   <div class="headerBorder">
+   <h1 class="headerTitle">
    {props.title}
    </h1>
 

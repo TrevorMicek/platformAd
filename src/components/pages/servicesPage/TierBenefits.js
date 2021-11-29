@@ -1,17 +1,17 @@
 import React from 'react';
 
-import styles from '../../../styles/ServicesPage/tierBenefits.module.css';
+import styles from '../../../styles/ServicesPage/tierBenefits.css';
 const checkmark = require('../../../images/checkmark.jpg')
 
 const Benefits = (props) => (
-      props.title === undefined ? null : 
-      <div className={styles.benefits}>
+      props.title === undefined ? null :
+      <div class="benefits">
       <div>
-    <div className={styles.imgWrapper}>
-        <img src={checkmark} alt={"mid-sized blue checkmark icon"} className={styles.thirdGraphic} width="35px" height="35px" />
+    <div class="imgWrapper">
+        <img src={checkmark} alt={"mid-sized blue checkmark icon"} class="thirdGraphic" width="35px" height="35px" />
         </div>
-    <div className={styles.pricingWrapper}>
-        <h3 className={styles.benefitTitle}>
+    <div class="pricingWrapper">
+        <h3 class="benefitTitle">
           {props.title}
         </h3>
         </div>

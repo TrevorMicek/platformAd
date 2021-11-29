@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
 import MainSectionTitle from '../components/commonComps/MainSectionTitle'
-import styles from '../styles/ServicesPage/mainStyles.module.css';
+import styles from '../styles/ServicesPage/mainStyles.css';
 import Categories from '../components/pages/blogPage/BlogCategories'
 import CategoryData from '../data/blogPage/CategoryData'
 import basics from "../data/blogPage/blogPostData/basics"
