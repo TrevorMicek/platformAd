@@ -5,6 +5,7 @@ module.exports = {
     author: 'Trevor Micek',
   },
   plugins: [
+        'gatsby-plugin-postcss',
       {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

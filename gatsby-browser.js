@@ -12,3 +12,5 @@ export const onInitialClientRender = () => {
  globalHistory._onTransitionComplete();   
 }
 */
+
+import "./src/css/index.css"
