@@ -5,12 +5,13 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
+import { Link } from "gatsby"
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Product', href: '#' },
-  { name: 'Pricing', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Product', href: '/product' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function HeroComp() {
@@ -42,9 +43,9 @@ export default function HeroComp() {
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
                 {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
+                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -133,7 +134,7 @@ export default function HeroComp() {
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
-                      Get started
+                      Get a site now
                     </span>
                     <span className="ml-4 text-sm">Visit our product page</span>
                     <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
