@@ -3,10 +3,13 @@ import React from 'react';
 import storeStyles from '../../styles/StorePage/storeStyles.css'
 import secondStyles from './secondaryHeader.css';
 import firstStyles from '../../styles/FrontPage/headerStyles.css';
+
+import MainHeader from '../tailwindComps/Hero'
+import SecondaryHeader from '../tailwindComps/SecondaryHeader'
 const Header = (props) => {
 
   const firstTitle = 'Small Business Web Design & Development'
-  const secondaryTitles = ['Services & Pricing', 'About Us', 'Contact Us']
+  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog','Contact']
 
   const getSecondaryTitle = (curTitle) => {
     for (let i=0;i<secondaryTitles.length;i++) {
@@ -19,25 +22,13 @@ const Header = (props) => {
   const HomeHeader = () => (
     <section class="headerPictureWrapper">
 
-    <section class="gradient"></section>
-
-      <div class="headerBorder">
-      <h1 class="headerTitle">
-          <span>{props.title}</span>
-      </h1>
-      <h2 class="headerText">For retailers & professional services</h2>
-      </div>
+   <MainHeader />
 
     </section>
   )
-  const SecondaryHeader = () => (
+  const SecondaryHeaderComp = () => (
     <section class="headerPictureWrapper">
-   <div class="headerBorder">
-   <h1 class="headerTitle">
-   {props.title}
-   </h1>
-
-   </div>
+   <SecondaryHeader />
    </section>
   )
   const StoreHeader = () => (
@@ -53,9 +44,9 @@ const Header = (props) => {
   const SwitchHeader = () => {
     switch(props.title) {
         case firstTitle:
-          return <HomeHeader />
+          return <MainHeader />
         case secondTitle:
-          return <SecondaryHeader />
+          return <SecondaryHeader title={props.title} />
         default:
           return <StoreHeader />
     }

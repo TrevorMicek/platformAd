@@ -13,7 +13,8 @@ import { Helmet } from "react-helmet";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Footer from "../tailwindComps/Footer";
-import HeroComp from "../tailwindComps/Hero"
+import HeroComp from "../tailwindComps/Hero";
+
 import createComponent from '../commonComps/createCart'
 import "./layoutGrid.css"
 import "./layout.css"
@@ -56,7 +57,7 @@ const Layout = ({children, title, pageLayout}) => {
           <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
         </Helmet>
        <div class="grid">
-        <HeroComp />
+        <Header title={title} />
 
 
         <main style={pageLayout}  class="main">{children}</main>

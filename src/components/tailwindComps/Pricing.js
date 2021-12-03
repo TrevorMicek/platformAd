@@ -3,7 +3,18 @@ import React from 'react'
 import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
 const plans = [
-
+  {
+    title: 'Free',
+    featured: false,
+    description: 'All your essential business finances, taken care of.',
+    priceMonthly: 0,
+    priceYearly: 30,
+    mainFeatures: [
+      { id: 1, value: 'Basic invoicing' },
+      { id: 2, value: 'Easy to use accounting' },
+      { id: 3, value: 'Mutli-accounts' },
+    ],
+  },
   {
     title: 'Starter',
     featured: false,
@@ -49,6 +60,7 @@ const features = [
   {
     title: 'Tax Savings',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -57,6 +69,7 @@ const features = [
   {
     title: 'Easy to use accounting',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -65,6 +78,7 @@ const features = [
   {
     title: 'Multi-accounts',
     tiers: [
+      { title: 'free', value: '1 accounts' },
       { title: 'starter', value: '3 accounts' },
       { title: 'popular', featured: true, value: 'Unlimited accounts' },
       { title: 'intermediate', value: '7 accounts' },
@@ -73,6 +87,7 @@ const features = [
   {
     title: 'Invoicing',
     tiers: [
+      { title: 'free', value: '1 invoices' },
       { title: 'starter', value: '3 invoices' },
       { title: 'popular', featured: true, value: 'Unlimited invoices' },
       { title: 'intermediate', value: '10 invoices' },
@@ -81,6 +96,7 @@ const features = [
   {
     title: 'Exclusive offers',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -89,6 +105,7 @@ const features = [
   {
     title: '6 months free advisor',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -97,6 +114,7 @@ const features = [
   {
     title: 'Mobile and web access',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: false },
@@ -107,6 +125,7 @@ const perks = [
   {
     title: '24/7 customer support',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -115,6 +134,7 @@ const perks = [
   {
     title: 'Instant notifications',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -123,6 +143,7 @@ const perks = [
   {
     title: 'Budgeting tools',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -131,6 +152,7 @@ const perks = [
   {
     title: 'Digital receipts',
     tiers: [
+      { title: 'free', value: true },
       { title: 'starter', value: true },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -139,6 +161,7 @@ const perks = [
   {
     title: 'Pots to separate money',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: true },
@@ -147,6 +170,7 @@ const perks = [
   {
     title: 'Free bank transfers',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: false },
@@ -155,6 +179,7 @@ const perks = [
   {
     title: 'Business debit card',
     tiers: [
+      { title: 'free', value: false },
       { title: 'starter', value: false },
       { title: 'popular', featured: true, value: true },
       { title: 'intermediate', value: false },
@@ -168,7 +193,7 @@ function classNames(...classes) {
 
 export default function Pricing() {
   return (
-    <div className="bg-gray-50" style={{gridColumn: 'span 7'}}>
+    <div className="bg-gray-50 " style={{gridColumn: 'span 7'}}>
       <div className="relative bg-indigo-600">
         {/* Overlapping background */}
         <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
@@ -176,7 +201,7 @@ export default function Pricing() {
         <div className="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
             <span className="block lg:inline">Simple pricing,</span>
-            <span className="block lg:inline">no commitment.</span>
+            <span className="block lg:inline">all-in-one packages.</span>
           </h1>
           <p className="mt-4 text-xl text-indigo-100">
             Everything you need, nothing you don't. Pick a plan that best suits your business.
@@ -241,7 +266,7 @@ export default function Pricing() {
                       </p>
                       <div className="ml-4">
                         <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                          or JUST <br /> {plan.priceYearly} / mo
+                          {plan.priceMonthly === 0 ? '+ ' : 'or JUST'}  {plan.priceYearly} / mo
                         </p>
                         <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                           Yearly Contracts
@@ -257,7 +282,7 @@ export default function Pricing() {
                         'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                       )}
                     >
-                      Buy {plan.title}
+                      {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
                     </a>
                   </div>
                 </div>

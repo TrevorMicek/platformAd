@@ -20,9 +20,9 @@ import Pricing from '../components/tailwindComps/Pricing'
 
 const ServicePage = () => (
 
-  <Layout title="Product" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto"}}>
+  <Layout title="Pricing" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto"}}>
     <SEO title="Home" />
-    <ProductBenefit />
+    <Pricing />
 
   </Layout>
 )

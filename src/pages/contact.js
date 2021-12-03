@@ -6,7 +6,7 @@ import SEO from "../components/layout/seo"
 import Main from '../components/pages/ContactPage/contactForm'
 
 const IndexPage = () => (
-  <Layout title="Contact Us">
+  <Layout title="Contact">
     <SEO title="Home" />
     <Main />
   </Layout>

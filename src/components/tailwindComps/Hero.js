@@ -144,8 +144,7 @@ export default function HeroComp() {
                     <span className="block text-indigo-400">of making websites</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
-                  Websites By Trevor is aiming to change how small business web design & development is being done.
-                  The main difference is we build single page applications and work to bring those high quality sites to small businesses like yours, or your clients'.
+                  High speed websites personalized to your business
                   </p>
                   <div className="mt-10 sm:mt-12">
                     <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
