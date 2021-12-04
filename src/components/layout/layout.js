@@ -61,7 +61,7 @@ const Layout = ({children, title, pageLayout}) => {
 
 
         <main style={pageLayout}  class="main">{children}</main>
-
+        <Footer />
        </div>
       </div>
 
