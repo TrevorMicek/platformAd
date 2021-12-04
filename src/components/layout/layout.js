@@ -57,7 +57,7 @@ const Layout = ({children, title, pageLayout}) => {
           <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
         </Helmet>
        <div class="grid">
-        <Header title={title} />
+        <HeroComp title={title} />
 
 
         <main style={pageLayout}  class="main">{children}</main>
