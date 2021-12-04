@@ -75,7 +75,7 @@ export default function Header(props) {
         </div>
       </div>
 
-      <div className="relative pt-6 pb-16 sm:pb-24">
+      <div className="relative pb-16 sm:pb-24">
       <Popover as="header" className="relative">
         <div className="bg-gray-900 pt-6">
           <nav
@@ -92,7 +92,7 @@ export default function Header(props) {
                     alt=""
                   />
                 </a>
-                <div className="-mr-2 flex items-center md:hidden">
+                <div className="-mr-2 mb-4 flex items-center md:hidden">
                   <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
