@@ -23,7 +23,7 @@ export default function ProductBenefit() {
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div>
           <h2 className="text-base font-semibold text-indigo-600 uppercase tracking-wide">Everything you need</h2>
-          <p className="mt-2 max-w-2xl text-3xl font-extrabold text-gray-900 mr-8">For a better website than your competitor's</p>
+          <p className="mt-2 max-w-2xl text-3xl font-extrabold text-gray-900 mr-8">Focused on quality & performance</p>
           <p className="mt-4 text-lg text-gray-500">
           Speed: 2x-4x Faster Than WordPress<br />
 

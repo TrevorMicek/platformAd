@@ -9,7 +9,7 @@ import Main from '../components/pages/ContactPage/contactForm'
 const IndexPage = () => (
   <Layout title="Contact">
     <SEO title="Home" />
-    <main />
+    <Form />
   </Layout>
 )
 export default IndexPage
