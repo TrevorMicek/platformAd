@@ -1,5 +1,7 @@
 import React from 'react'
 
+const officeImg = require('../../images/coding7.jpg')
+const metricsImg = require('../../images/metrics.jpg')
 export default function Example() {
     return (
       <div className="relative bg-white pr-4" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
@@ -34,6 +36,13 @@ export default function Example() {
                   <li>Every website we make is uniquely hand coded to your liking & branding.</li>
                   <li>Our prices are roughly half the cost of other designers & developers.</li>
                 </ul>
+                <img
+              className="h-56 w-full object-cover lg:absolute lg:h-full"
+              src={officeImg}
+              width="100px"
+              height="50px"
+              alt=""
+            />
                 <h3>How we make better websites</h3>
                 <p className="max-w-2xl">
                   We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our bigger upfront costs very affordable for any client.
@@ -45,7 +54,13 @@ export default function Example() {
                 <p className="max-w-2xl">
                   We will have multi-weekly meetings to discuss the design and direction of the website to further tailor the site to your business.
                 </p>
-
+                <img
+              className="h-65 w-full object-cover lg:absolute lg:h-full"
+              src={metricsImg}
+              width="100px"
+              height="50px"
+              alt=""
+            />
 
                 <h3>How we’re different</h3>
                 <p className="max-w-2xl">
