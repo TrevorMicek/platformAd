@@ -8,6 +8,8 @@ export default function Example() {
             <img
               className="h-56 w-full object-cover lg:absolute lg:h-full"
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+              width="100px"
+              height="50px"
               alt=""
             />
           </div>
@@ -17,7 +19,7 @@ export default function Example() {
             <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
               <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Process</h2>
               <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              perfect for retailers & business services
+              Perfect for retailers & business services
               </h3>
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
                 Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
@@ -32,6 +34,7 @@ export default function Example() {
                   <li>Every website we make is uniquely hand coded to your liking & branding.</li>
                   <li>Our prices are roughly half the cost of other designers & developers.</li>
                 </ul>
+                <h3>How we make better websites</h3>
                 <p className="max-w-2xl">
                   We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our bigger upfront costs very affordable for any client.
                 </p>
