@@ -20,42 +20,36 @@ export default function Example() {
               perfect for retailers & business services
               </h3>
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                pellentesque. Blandit amet, sed aenean erat arcu morbi.
+                Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
               </p>
               <div className="mt-5 prose prose-indigo text-gray-500">
                 <p className="max-w-2xl">
-                  Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                  pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
-                </p>
-                <p className="max-w-2xl">
-                  Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet
-                  fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.
-                </p>
-                <p className="max-w-2xl">
-                  Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus, egestas netus cursus. In.
+                  We are actively trying to bridge the gap between page built websites that are great for starting out, and websites you'd see at a mid-sized business.
+                  When you need something better there's only expensive options. This is where we excel & this is why we do what we do; to make fast, high quality websites that are affordable to small businesses like you.
                 </p>
                 <ul role="list">
-                  <li>Quis elit egestas venenatis mattis dignissim.</li>
-                  <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
-                  <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+                  <li>Our websites often score two to three times as fast on page load times.</li>
+                  <li>Every website we make is uniquely hand coded to your liking & branding.</li>
+                  <li>Our prices are roughly half the cost of other designers & developers.</li>
                 </ul>
                 <p className="max-w-2xl">
-                  Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
-                  velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
-                  egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+                  We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our bigger upfront costs very affordable for any client.
                 </p>
+                <p className="max-w-2xl">
+                  Each client is directed to <a href="https://html5up.net">This Site</a> to pick out a design they like. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
+                  We then recreate the design you picked with many elements of the other websites including your current website so that we have a brand new, completely unique website.
+                </p>
+                <p className="max-w-2xl">
+                  We will have multi-weekly meetings to discuss the design and direction of the website to further tailor the site to your business.
+                </p>
+
+
                 <h3>How we’re different</h3>
                 <p className="max-w-2xl">
-                  Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
-                  Montes, magna cursus nulla feugiat dignissim id lobortis amet. Laoreet sem est phasellus eu proin massa,
-                  lectus. Diam rutrum posuere donec ultricies non morbi. Mi a platea auctor mi.
+                  What makes Websites By Trevor truly unique, aside from the above, is that we genuinely care and have built an entire business model around helping small businesses access better websites. Our process is very unique and is always evolving to be even better for our clients.
                 </p>
                 <p className="max-w-2xl">
-                  Mauris ullamcorper imperdiet nec egestas mi quis quam ante vulputate. Vel faucibus adipiscing lacus,
-                  eget. Nunc fermentum id tellus donec. Ut metus odio sit sit varius non nunc orci. Eu, mi neque, ornare
-                  suspendisse amet, nibh. Facilisi volutpat lectus id sapien dis mauris rhoncus. Est rhoncus, interdum
-                  imperdiet ac eros, diam mauris, tortor. Risus id sit molestie magna.
+                  Another reason we are unique is because we aren't just selling websites to small businesses. One of our main goals is to create a community where we can all connect and help each other out. We are actively looking for partnerships with business service companies that work directly with you in order to offer even more affordable packages and helpful knowledge.
                 </p>
               </div>
             </div>
