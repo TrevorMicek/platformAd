@@ -1,8 +1,11 @@
-import React from 'react'
 
+import React, { useState } from 'react'
+import { ChevronDoubleDownIcon } from '@heroicons/react/outline'
 const officeImg = require('../../images/coding7.jpg')
 const metricsImg = require('../../images/metrics.jpg')
+
 export default function Example() {
+  const [learnMore, setLearnMore] = useState(false)
     return (
       <div className="relative bg-white pr-4" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
         <div className="lg:absolute lg:inset-0 ">
@@ -16,14 +19,15 @@ export default function Example() {
               alt="team working together at office"
             />
 
+
           </div>
         </div>
         <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
           <div className="lg:col-start-2 lg:pl-8">
             <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-              <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Process</h2>
+              <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Goals</h2>
               <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Perfect for retailers & business services
+                Perfect for online stores
               </h3>
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
                 Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
@@ -38,13 +42,19 @@ export default function Example() {
                   <li>Every website we make is uniquely hand coded to your liking & branding.</li>
                   <li>Our prices are roughly half the cost of other designers & developers.</li>
                 </ul>
-                <img
+                {
+                  learnMore ? <>
+                  <div className="flex flex-row justify-between text-lg cursor-pointer text-gray-900 border-b-2 border-solid border-gray-600 w-32 ml-4" onClick={()=>setLearnMore(false)}>Learn More...<div className="transform rotate-180 mb-2"><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg></div></div>
+                  <img
               className="h-65 w-full object-cover "
               src={officeImg}
               width="100px"
               height="50px"
               alt="picture of computer with code on it"
             />
+
                 <h3>How we make better websites</h3>
                 <p className="max-w-2xl">
                   We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our bigger upfront costs very affordable for any client.
@@ -64,15 +74,20 @@ export default function Example() {
               height="100px"
               alt="google page speed metrics"
             />
-            </a>
+            </a></> :  <div className="flex flex-row justify-between text-lg cursor-pointer text-gray-800 border-b-2 border-solid border-gray-600 w-32 ml-4" onClick={()=>setLearnMore(true)}>Learn More...<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg></div>
 
+                }
+            {/*
                 <h3>How we’re different</h3>
                 <p className="max-w-2xl">
                   What makes Websites By Trevor truly unique, aside from the above, is that we genuinely care and have built an entire business model around helping small businesses access better websites. Our process is very unique and is always evolving to be even better for our clients.
                 </p>
                 <p className="max-w-2xl">
                   Another reason we are unique is because we aren't just selling websites to small businesses. One of our main goals is to create a community where we can all connect and help each other out. We are actively looking for partnerships with business service companies that work directly with you in order to offer even more affordable packages and helpful knowledge.
-                </p>
+                </p>*/
+}
               </div>
             </div>
           </div>

@@ -140,11 +140,11 @@ export default function HeroComp() {
                     <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">A new way</span>
-                    <span className="block text-indigo-400">of making websites</span>
+                    <span className="block">Wholesale Custom</span>
+                    <span className="block text-indigo-400">Ecommerce Websites</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
-                  High speed websites personalized to your business
+                  High quality websites for business services. Customized to your clients.
                   </p>
                   <div className="mt-10 sm:mt-12">
                     <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
