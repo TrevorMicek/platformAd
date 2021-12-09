@@ -25,9 +25,9 @@ export default function Example() {
         <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
           <div className="lg:col-start-2 lg:pl-8">
             <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-              <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Goals</h2>
+              <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">what we do</h2>
               <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Perfect for online stores
+              page builder vs hand coded
               </h3>
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
                 Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
