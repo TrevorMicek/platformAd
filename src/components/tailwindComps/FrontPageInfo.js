@@ -27,7 +27,7 @@ export default function Example() {
             <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
               <h2 className="leading-6 text-base text-indigo-600 font-semibold tracking-wide uppercase">what we do</h2>
               <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              page builder vs hand coded
+              Page Builder vs Hand Coded
               </h3>
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
                 Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.

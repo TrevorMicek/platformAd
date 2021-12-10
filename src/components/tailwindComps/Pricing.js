@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
-const plans = [
+const ecommercePlans = [
   {
     title: 'Free',
     featured: false,
@@ -19,7 +19,7 @@ const plans = [
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
-    priceMonthly: 2800,
+    priceMonthly: 700,
     priceYearly: 99,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
@@ -28,10 +28,10 @@ const plans = [
     ],
   },
   {
-    title: 'Full Solution -- Recommended',
+    title: 'Full Solution',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 14000,
+    priceMonthly: 3500,
     priceYearly: 325,
     mainFeatures: [
       { id: 1, value: 'Advanced invoicing' },
@@ -46,7 +46,7 @@ const plans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 7700,
+    priceMonthly: 1925,
     priceYearly: 160,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
@@ -56,7 +56,7 @@ const plans = [
     ],
   },
 ]
-const features = [
+const ecomFeatures = [
   {
     title: 'Tax Savings',
     tiers: [
@@ -121,7 +121,193 @@ const features = [
     ],
   },
 ]
-const perks = [
+const ecomPerks = [
+  {
+    title: '24/7 customer support',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Instant notifications',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Budgeting tools',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Digital receipts',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Pots to separate money',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Free bank transfers',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: false },
+    ],
+  },
+  {
+    title: 'Business debit card',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: false },
+    ],
+  },
+]
+
+
+const standardPlans = [
+  {
+    title: 'Free',
+    featured: false,
+    description: 'All your essential business finances, taken care of.',
+    priceMonthly: 0,
+    priceYearly: 0,
+    mainFeatures: [
+      { id: 1, value: 'Basic invoicing' },
+      { id: 2, value: 'Easy to use accounting' },
+      { id: 3, value: 'Mutli-accounts' },
+    ],
+  },
+  {
+    title: 'Starter',
+    featured: false,
+    description: 'All your essential business finances, taken care of.',
+    priceMonthly: 440,
+    priceYearly: 99,
+    mainFeatures: [
+      { id: 1, value: 'Basic invoicing' },
+      { id: 2, value: 'Easy to use accounting' },
+      { id: 3, value: 'Mutli-accounts' },
+    ],
+  },
+  {
+    title: 'Full Solution',
+    featured: true,
+    description: 'The best financial services for your thriving business.',
+    priceMonthly: 1750,
+    priceYearly: 145,
+    mainFeatures: [
+      { id: 1, value: 'Advanced invoicing' },
+      { id: 2, value: 'Easy to use accounting' },
+      { id: 3, value: 'Mutli-accounts' },
+      { id: 4, value: 'Tax planning toolkit' },
+      { id: 5, value: 'VAT & VATMOSS filing' },
+      { id: 6, value: 'Free bank transfers' },
+    ],
+  },
+  {
+    title: 'Budget',
+    featured: false,
+    description: 'Convenient features to take your business to the next level.',
+    priceMonthly: 1925,
+    priceYearly: 160,
+    mainFeatures: [
+      { id: 1, value: 'Basic invoicing' },
+      { id: 2, value: 'Easy to use accounting' },
+      { id: 3, value: 'Mutli-accounts' },
+      { id: 4, value: 'Tax planning toolkit' },
+    ],
+  },
+]
+const standardFeatures = [
+  {
+    title: 'Tax Savings',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Easy to use accounting',
+    tiers: [
+      { title: 'free', value: true },
+      { title: 'starter', value: true },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Multi-accounts',
+    tiers: [
+      { title: 'free', value: '1 accounts' },
+      { title: 'starter', value: '3 accounts' },
+      { title: 'popular', featured: true, value: 'Unlimited accounts' },
+      { title: 'intermediate', value: '7 accounts' },
+    ],
+  },
+  {
+    title: 'Invoicing',
+    tiers: [
+      { title: 'free', value: '1 invoices' },
+      { title: 'starter', value: '3 invoices' },
+      { title: 'popular', featured: true, value: 'Unlimited invoices' },
+      { title: 'intermediate', value: '10 invoices' },
+    ],
+  },
+  {
+    title: 'Exclusive offers',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: '6 months free advisor',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: true },
+    ],
+  },
+  {
+    title: 'Mobile and web access',
+    tiers: [
+      { title: 'free', value: false },
+      { title: 'starter', value: false },
+      { title: 'popular', featured: true, value: true },
+      { title: 'intermediate', value: false },
+    ],
+  },
+]
+const standardPerks = [
   {
     title: '24/7 customer support',
     tiers: [
@@ -192,6 +378,199 @@ function classNames(...classes) {
 }
 
 export default function Pricing() {
+  const [packages, setPackages] = useState('ecom')
+  const PackageToggle = () => (
+    <>
+    {
+      packages === 'ecom' ?
+      <div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
+      {/* Decorative background */}
+      <div
+        aria-hidden="true"
+        className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
+      />
+
+      <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
+        {ecommercePlans.map((plan) => (
+          <div
+            key={plan.title}
+            className={classNames(
+              plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
+              'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+            )}
+          >
+            <div>
+              <h3
+                className={classNames(
+                  plan.featured ? 'text-indigo-600' : 'text-white',
+                  'text-sm font-semibold uppercase tracking-wide'
+                )}
+              >
+                {plan.title}
+              </h3>
+              <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
+                <div className="mt-3 flex items-center">
+                  <p
+                    className={classNames(
+                      plan.featured ? 'text-indigo-600' : 'text-white',
+                      'text-4xl font-extrabold tracking-tight'
+                    )}
+                  >
+                    ${plan.priceMonthly}
+                  </p>
+                  <div className="ml-4">
+                    <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
+                      +  {plan.priceYearly} / mo
+                    </p>
+                    <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
+                      Yearly Contracts
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  className={classNames(
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                    'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                  )}
+                >
+                  {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
+                </a>
+              </div>
+            </div>
+            <h4 className="sr-only">Features</h4>
+            <ul
+              role="list"
+              className={classNames(
+                plan.featured
+                  ? 'border-gray-200 divide-gray-200'
+                  : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
+                'mt-7 border-t divide-y lg:border-t-0'
+              )}
+            >
+              {plan.mainFeatures.map((mainFeature) => (
+                <li key={mainFeature.id} className="py-3 flex items-center">
+                  <CheckIcon
+                    className={classNames(
+                      plan.featured ? 'text-indigo-500' : 'text-indigo-200',
+                      'w-5 h-5 flex-shrink-0'
+                    )}
+                    aria-hidden="true"
+                  />
+                  <span
+                    className={classNames(
+                      plan.featured ? 'text-gray-600' : 'text-white',
+                      'ml-3 text-sm font-medium'
+                    )}
+                  >
+                    {mainFeature.value}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div> :
+
+<div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
+{/* Decorative background */}
+<div
+  aria-hidden="true"
+  className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
+/>
+
+<div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
+  {standardPlans.map((plan) => (
+    <div
+      key={plan.title}
+      className={classNames(
+        plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
+        'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+      )}
+    >
+      <div>
+        <h3
+          className={classNames(
+            plan.featured ? 'text-indigo-600' : 'text-white',
+            'text-sm font-semibold uppercase tracking-wide'
+          )}
+        >
+          {plan.title}
+        </h3>
+        <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
+          <div className="mt-3 flex items-center">
+            <p
+              className={classNames(
+                plan.featured ? 'text-indigo-600' : 'text-white',
+                'text-4xl font-extrabold tracking-tight'
+              )}
+            >
+              ${plan.priceMonthly}
+            </p>
+            <div className="ml-4">
+              <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
+                +  {plan.priceYearly} / mo
+              </p>
+              <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
+                Yearly Contracts
+              </p>
+            </div>
+          </div>
+          <a
+            href="#"
+            className={classNames(
+              plan.featured
+                ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                : 'bg-white text-indigo-600 hover:bg-indigo-50',
+              'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+            )}
+          >
+            {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
+          </a>
+        </div>
+      </div>
+      <h4 className="sr-only">Features</h4>
+      <ul
+        role="list"
+        className={classNames(
+          plan.featured
+            ? 'border-gray-200 divide-gray-200'
+            : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
+          'mt-7 border-t divide-y lg:border-t-0'
+        )}
+      >
+        {plan.mainFeatures.map((mainFeature) => (
+          <li key={mainFeature.id} className="py-3 flex items-center">
+            <CheckIcon
+              className={classNames(
+                plan.featured ? 'text-indigo-500' : 'text-indigo-200',
+                'w-5 h-5 flex-shrink-0'
+              )}
+              aria-hidden="true"
+            />
+            <span
+              className={classNames(
+                plan.featured ? 'text-gray-600' : 'text-white',
+                'ml-3 text-sm font-medium'
+              )}
+            >
+              {mainFeature.value}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
+</div>
+    }
+    </>
+  )
+
+
   return (
     <div className="bg-gray-50 " style={{gridColumn: 'span 7'}}>
       <div className="relative bg-indigo-600">
@@ -215,111 +594,22 @@ export default function Pricing() {
           <div className="bg-indigo-700 p-0.5 rounded-lg flex">
             <button
               type="button"
+              onClick={() => setPackages('ecom')}
               className="relative bg-white py-2 px-6 border-indigo-700 rounded-md shadow-sm text-sm font-medium text-indigo-700 whitespace-nowrap hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10"
             >
               Ecommerce
             </button>
             <button
               type="button"
+              onClick={() => setPackages('standard')}
               className="ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium text-indigo-200 whitespace-nowrap hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10"
             >
               Standard
             </button>
           </div>
         </div>
+        <PackageToggle />
 
-        {/* Cards */}
-        <div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
-          {/* Decorative background */}
-          <div
-            aria-hidden="true"
-            className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
-          />
-
-          <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
-            {plans.map((plan) => (
-              <div
-                key={plan.title}
-                className={classNames(
-                  plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
-                  'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
-                )}
-              >
-                <div>
-                  <h3
-                    className={classNames(
-                      plan.featured ? 'text-indigo-600' : 'text-white',
-                      'text-sm font-semibold uppercase tracking-wide'
-                    )}
-                  >
-                    {plan.title}
-                  </h3>
-                  <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-                    <div className="mt-3 flex items-center">
-                      <p
-                        className={classNames(
-                          plan.featured ? 'text-indigo-600' : 'text-white',
-                          'text-4xl font-extrabold tracking-tight'
-                        )}
-                      >
-                        ${plan.priceMonthly}
-                      </p>
-                      <div className="ml-4">
-                        <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                          {plan.priceMonthly === 0 ? '+ ' : 'or JUST'}  {plan.priceYearly} / mo
-                        </p>
-                        <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-                          Yearly Contracts
-                        </p>
-                      </div>
-                    </div>
-                    <a
-                      href="#"
-                      className={classNames(
-                        plan.featured
-                          ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                          : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                        'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
-                      )}
-                    >
-                      {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
-                    </a>
-                  </div>
-                </div>
-                <h4 className="sr-only">Features</h4>
-                <ul
-                  role="list"
-                  className={classNames(
-                    plan.featured
-                      ? 'border-gray-200 divide-gray-200'
-                      : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
-                    'mt-7 border-t divide-y lg:border-t-0'
-                  )}
-                >
-                  {plan.mainFeatures.map((mainFeature) => (
-                    <li key={mainFeature.id} className="py-3 flex items-center">
-                      <CheckIcon
-                        className={classNames(
-                          plan.featured ? 'text-indigo-500' : 'text-indigo-200',
-                          'w-5 h-5 flex-shrink-0'
-                        )}
-                        aria-hidden="true"
-                      />
-                      <span
-                        className={classNames(
-                          plan.featured ? 'text-gray-600' : 'text-white',
-                          'ml-3 text-sm font-medium'
-                        )}
-                      >
-                        {mainFeature.value}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Feature comparison (up to lg) */}
@@ -329,7 +619,7 @@ export default function Pricing() {
         </h2>
 
         <div className="max-w-2xl mx-auto py-16 px-4 space-y-16 sm:px-6">
-          {plans.map((plan, mobilePlanIndex) => (
+          {ecommercePlans.map((plan, mobilePlanIndex) => (
             <div key="plan.title" className="border-t border-gray-200">
               <div
                 className={classNames(
@@ -362,7 +652,7 @@ export default function Pricing() {
                   )}
                 >
                   <dl className="divide-y divide-gray-200">
-                    {features.map((feature) => (
+                    {ecomFeatures.map((feature) => (
                       <div
                         key={feature.title}
                         className="py-3 flex items-center justify-between sm:grid sm:grid-cols-2"
@@ -428,7 +718,7 @@ export default function Pricing() {
                   )}
                 >
                   <dl className="divide-y divide-gray-200">
-                    {perks.map((perk) => (
+                    {ecomPerks.map((perk) => (
                       <div key={perk.title} className="py-3 flex justify-between sm:grid sm:grid-cols-2">
                         <dt className="text-sm font-medium text-gray-600 sm:pr-4">{perk.title}</dt>
                         <dd className="text-center sm:px-4">
@@ -471,11 +761,11 @@ export default function Pricing() {
             <div className="-mt-px w-1/4 py-6 pr-4 flex items-end">
               <h3 className="mt-auto text-sm font-bold text-gray-900">Catered for business</h3>
             </div>
-            {plans.map((plan, planIdx) => (
+            {ecommercePlans.map((plan, planIdx) => (
               <div
                 key={plan.title}
                 aria-hidden="true"
-                className={classNames(planIdx === plans.length - 1 ? '' : 'pr-4', '-mt-px pl-4 w-1/4')}
+                className={classNames(planIdx === ecommercePlans.length - 1 ? '' : 'pr-4', '-mt-px pl-4 w-1/4')}
               >
                 <div
                   className={classNames(plan.featured ? 'border-indigo-600' : 'border-transparent', 'py-6 border-t-2')}
@@ -511,7 +801,7 @@ export default function Pricing() {
                   <th scope="col">
                     <span className="sr-only">Feature</span>
                   </th>
-                  {plans.map((plan) => (
+                  {ecommercePlans.map((plan) => (
                     <th key={plan.title} scope="col">
                       <span className="sr-only">{plan.title} plan</span>
                     </th>
@@ -519,7 +809,7 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                {features.map((feature) => (
+                {ecomFeatures.map((feature) => (
                   <tr key={feature.title}>
                     <th scope="row" className="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600">
                       {feature.title}
@@ -600,7 +890,7 @@ export default function Pricing() {
                   <th scope="col">
                     <span className="sr-only">Perk</span>
                   </th>
-                  {plans.map((plan) => (
+                  {ecommercePlans.map((plan) => (
                     <th key={plan.title} scope="col">
                       <span className="sr-only">{plan.title} plan</span>
                     </th>
@@ -608,7 +898,7 @@ export default function Pricing() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                {perks.map((perk) => (
+                {ecomPerks.map((perk) => (
                   <tr key={perk.title}>
                     <th scope="row" className="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600">
                       {perk.title}
