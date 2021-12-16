@@ -8,7 +8,7 @@ const ecommercePlans = [
     featured: false,
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 0,
-    priceYearly: 30,
+    priceYearly: 0,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
       { id: 2, value: 'Easy to use accounting' },
@@ -19,8 +19,8 @@ const ecommercePlans = [
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
-    priceMonthly: 700,
-    priceYearly: 99,
+    priceMonthly: 900,
+    priceYearly: 90,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
       { id: 2, value: 'Easy to use accounting' },
@@ -31,7 +31,7 @@ const ecommercePlans = [
     title: 'Full Solution',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 3500,
+    priceMonthly: 4500,
     priceYearly: 325,
     mainFeatures: [
       { id: 1, value: 'Advanced invoicing' },
@@ -46,8 +46,8 @@ const ecommercePlans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 1925,
-    priceYearly: 160,
+    priceMonthly: 2450,
+    priceYearly: 205,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
       { id: 2, value: 'Easy to use accounting' },
@@ -205,8 +205,8 @@ const standardPlans = [
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
-    priceMonthly: 440,
-    priceYearly: 99,
+    priceMonthly: 615,
+    priceYearly: 45,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
       { id: 2, value: 'Easy to use accounting' },
@@ -217,8 +217,8 @@ const standardPlans = [
     title: 'Full Solution',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 1750,
-    priceYearly: 145,
+    priceMonthly: 2450,
+    priceYearly: 175,
     mainFeatures: [
       { id: 1, value: 'Advanced invoicing' },
       { id: 2, value: 'Easy to use accounting' },
@@ -232,8 +232,8 @@ const standardPlans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 1925,
-    priceYearly: 160,
+    priceMonthly: 1700,
+    priceYearly: 175,
     mainFeatures: [
       { id: 1, value: 'Basic invoicing' },
       { id: 2, value: 'Easy to use accounting' },

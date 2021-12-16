@@ -17,9 +17,9 @@ const features = [
     icon: LightningBoltIcon,
   },
   {
-    name: 'Subscription OR Upfront',
+    name: 'Subscription Pricing',
     description:
-      "I personally have created a new pricing model so you can choose between our unique subscription w/ NO SETUP FEE, or the normal website pricing of 50% down & 50% when the site is all done. Either way you enjoy affordable packages, simple contracts, & no hidden fees.",
+      "I personally have created a new pricing model that uses a unique subscription w/ very a low setup fee, and low monthly fee. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees.",
     icon: ScaleIcon,
   },
   {
