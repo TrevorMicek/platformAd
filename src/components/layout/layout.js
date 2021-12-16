@@ -13,16 +13,9 @@ import { Helmet } from "react-helmet";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Footer from "../tailwindComps/Footer";
-import HeroComp from "../tailwindComps/Hero";
 
-import createComponent from '../commonComps/createCart'
 import "./layoutGrid.css"
 import "./layout.css"
-import { useShopify } from "../../storePage/hooks";
-import { createStore, combineReducers, applyMiddleware, compose } from "redux"
-import thunk from "redux-thunk"
-import * as reducers from "../../storePage/redux/ducks"
-import { Provider } from "react-redux"
 const Layout = ({children, title, pageLayout}) => {
 
 
