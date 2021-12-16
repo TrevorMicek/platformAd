@@ -4,6 +4,8 @@ import storeStyles from '../../styles/StorePage/storeStyles.css'
 import secondStyles from './secondaryHeader.css';
 import firstStyles from '../../styles/FrontPage/headerStyles.css';
 
+import MainHeader from '../tailwindComps/Hero'
+import SecondaryHeader from '../tailwindComps/SecondaryHeader'
 const Header = (props) => {
 
   const firstTitle = 'Small Business Web Design & Development'
@@ -20,13 +22,13 @@ const Header = (props) => {
   const HomeHeader = () => (
     <section class="headerPictureWrapper">
 
-
+   <MainHeader />
 
     </section>
   )
   const SecondaryHeaderComp = () => (
     <section class="headerPictureWrapper">
-
+   <SecondaryHeader />
    </section>
   )
   const StoreHeader = () => (
@@ -42,9 +44,9 @@ const Header = (props) => {
   const SwitchHeader = () => {
     switch(props.title) {
         case firstTitle:
-          return ''
+          return <MainHeader />
         case secondTitle:
-          return ''
+          return <SecondaryHeader title={props.title} />
         default:
           return <StoreHeader />
     }
