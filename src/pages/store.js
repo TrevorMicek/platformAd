@@ -108,9 +108,6 @@ return (
     <div className={styles.wrapper}>
     <SEO title="Online Store" />
 
-	<Provider store={store}>
-        <Pages title={pageTitle} getTitle={getTitle} />
-	</Provider>
 
    </div>
 )
