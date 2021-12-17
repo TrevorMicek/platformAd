@@ -109,16 +109,7 @@ function checkout() {
 }
 
 // Gets Shopify store information
-function shopInfo() {
-	return (dispatch) => {
-		client.shop.fetchInfo().then((resp) => {
-			dispatch({
-				type: SHOP_FOUND,
-				payload: resp,
-			})
-		})
-	}
-}
+
 
 // Adds variants to cart/checkout
 function addVariantToCart(checkoutId, lineItemsToAdd) {
@@ -206,7 +197,7 @@ export function useShopify() {
 	const fetchProduct = (id) => dispatch(getProduct(id))
 	// const fetchCollection = () => dispatch(getCollection())
 	const createCheckout = () => dispatch(checkout())
-	const createShop = () => dispatch(shopInfo())
+
 	const closeCart = () => dispatch(handleCartClose())
 	const openCart = () => dispatch(handleCartOpen())
 	const setCount = (count) => dispatch(handleSetCount(count))
@@ -231,7 +222,7 @@ export function useShopify() {
 		fetchProduct,
 		// fetchCollection,
 		createCheckout,
-		createShop,
+
 		closeCart,
 		openCart,
 		updateQuantity,

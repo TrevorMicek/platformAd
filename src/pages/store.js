@@ -115,6 +115,6 @@ return (
    </div>
 )
 }
-return <>hi</>
+return <Store />
 }
 export default App;
