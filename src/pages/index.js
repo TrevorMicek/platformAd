@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -9,18 +9,12 @@ import SecondSection from '../components/pages/frontPage/Benefits'
 import info from '../data/frontPage/pageData'
 import MoreInfo from '../components/tailwindComps/FrontPageInfo'
 import styles from '../styles/FrontPage/wrapper.css'
-const IndexPage = () => {
-  const [store, setStore] = useState(false)
-return (
+const IndexPage = () => (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto"}}>
-    {store ?<>ji</> : <>
     <SEO title="Home" />
 <FeatureSection />
 <MoreInfo />
-</>
-}
 
   </Layout>
 )
-}
 export default IndexPage
