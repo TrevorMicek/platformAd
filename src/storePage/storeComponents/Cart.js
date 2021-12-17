@@ -11,7 +11,7 @@ export default (props) => {
 		checkoutState,
 		setCount,
 	} = useShopify()
-	
+
 	function handleOpen(e) {
 		e.preventDefault()
 		openCart()
@@ -52,25 +52,23 @@ export default (props) => {
 
 		getCount()
 	}, [cartStatus, checkoutState])
-	useEffect(() => {
-		props.create()
-	}, [checkoutState.id])
+
 
 	return (
 		<div id="cart">
 			<div className={`Cart ${cartStatus ? "Cart--open" : ""}`}>
 				<div className="App__view-cart-wrapper2">
-					
+
 					<button className="App__view-cart" onClick={(e) => handleOpen(e)}>
 						<MdShoppingCart />
-						
+
 					</button>
 				</div>
 				<header className="Cart__header">
 				<div className="titleWrapper">
 						<h2>Your cart</h2>
 					<button className="clearButton" onClick={() => window.localStorage.clear()}>CLEAR CART</button>
-					
+
 					</div>
 					<button className="Cart__close" onClick={(e) => handleClose(e)}>
 						<MdRemoveShoppingCart />
