@@ -1,25 +1,25 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
-import Products from "../storePage/storeComponents/Products"
-import ProductView from "../storePage/storeComponents/Productview"
-import Cart from '../storePage/storeComponents/Cart'
-import createComponent from '../components/commonComps/createCart'
-import HomeButton from '../components/commonComps/storeHeaderButton'
+import Products from "../../storePage/storeComponents/Products"
+import ProductView from "../../storePage/storeComponents/Productview"
+import Cart from '../../storePage/storeComponents/Cart'
+import createComponent from '../commonComps/createCart'
+import HomeButton from '../commonComps/storeHeaderButton'
 
-import { useShopify } from "../storePage/hooks"
+import { useShopify } from "../../storePage/hooks"
 
 import { Provider } from "react-redux"
 
-import "../styles/StorePage/app.css"
+import "../../styles/StorePage/app.css"
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/layout/seo"
-import styles from '../styles/StorePage/wrapper.css'
+import Layout from "../layout/layout"
+import SEO from "../layout/seo"
+import styles from '../../styles/StorePage/wrapper.css'
 
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"
-import * as reducers from "../storePage/redux/ducks"
+import * as reducers from "../../storePage/redux/ducks"
 
 const App = () => {
     const Pages = (props) => {
@@ -105,8 +105,14 @@ const Store = () => {
     const store = createStore(rootReducer, enhancer);
 return (
 
-    <>hi
-    </>
+    <div className={styles.wrapper}>
+    <SEO title="Online Store" />
+
+	<Provider store={store}>
+        <Pages title={pageTitle} getTitle={getTitle} />
+	</Provider>
+
+   </div>
 )
 }
 return <Store />

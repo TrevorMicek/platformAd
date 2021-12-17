@@ -1,20 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
+import Store from '../components/pages/store'
 import FeatureSection from '../components/tailwindComps/FeatureSection'
 import FirstSection from '../components/commonComps/MainSectionTitle'
 import SecondSection from '../components/pages/frontPage/Benefits'
 import info from '../data/frontPage/pageData'
 import MoreInfo from '../components/tailwindComps/FrontPageInfo'
 import styles from '../styles/FrontPage/wrapper.css'
-const IndexPage = () => (
+const IndexPage = () => {
+  const [store, setStore] = useState(false)
+return (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto"}}>
+    {store ? <Store /> : <>
     <SEO title="Home" />
 <FeatureSection />
 <MoreInfo />
+</>
+}
 
   </Layout>
 )
+}
 export default IndexPage
