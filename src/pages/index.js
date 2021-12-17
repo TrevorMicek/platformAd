@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
-import Store from '../components/pages/store'
 import FeatureSection from '../components/tailwindComps/FeatureSection'
 import FirstSection from '../components/commonComps/MainSectionTitle'
 import SecondSection from '../components/pages/frontPage/Benefits'
