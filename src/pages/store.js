@@ -46,7 +46,7 @@ const App = () => {
         return createComponent(cart, addVariant)
     }
 	useEffect(() => {
-		createShop()
+
 		fetchProducts()
 		createCheckout()
 
