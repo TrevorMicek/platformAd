@@ -23,13 +23,7 @@ import * as reducers from "../storePage/redux/ducks"
 
 const App = () => {
     const Pages = (props) => {
-     const {
-		createShop,
-		createCheckout,
-		fetchProducts,
-        addVariant
-		// fetchCollection,
-	} = useShopify()
+
 
     const [cart, setCart] = useState([])
     const [cartAmount, setCartAmount] = useState(0)
@@ -39,19 +33,8 @@ const App = () => {
     const getCart = () => setCartAmount(cart.length)
 
     const storage = () => JSON.parse(window.localStorage.getItem('cart')) || {}
-    const createCart = () => {
 
-        addToCart(storage())
 
-        return createComponent(cart, addVariant)
-    }
-	useEffect(() => {
-		createShop()
-		fetchProducts()
-		createCheckout()
-
-		// fetchCollection()
-	}, [])
     const handleClick = (url) => getUrl(url)
     const ContinueShopping = () => (
         <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Continue Shopping" onClick={() => handleClick('../../')} />
@@ -76,7 +59,7 @@ const App = () => {
         <div className="homeButtonWrapper">
     {switchButton()}
 
-    <Cart create={createCart} title={props.title} homeButton={CartButton} button={getUrl} />
+
  </div>
     )
 
