@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
+import Products from "../storePage/storeComponents/Products"
+import ProductView from "../storePage/storeComponents/Productview"
+import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
 import HomeButton from '../components/commonComps/storeHeaderButton'
 
@@ -73,7 +76,7 @@ const App = () => {
         <div className="homeButtonWrapper">
     {switchButton()}
 
-
+    <Cart create={createCart} title={props.title} homeButton={CartButton} button={getUrl} />
  </div>
     )
 
@@ -81,6 +84,8 @@ const App = () => {
         <>
 
         <Router>
+			<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
+			<ProductView path='/store/products/:productId' cart={CartWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
         </>

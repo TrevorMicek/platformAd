@@ -15,21 +15,21 @@ export default (props) => {
 	const { products, fetchProduct, fetchProducts } = useShopify()
 
 	useEffect(() => {
-	
+
 		fetchProducts()
-		
-		
+
+
 		// fetchCollection()
 	}, [])
-	
+
 	const handleSearch = () => {
 		/*
 		for (let i=0;i<products.length;i++) {
-			products[i]['queryParams'] = 
+			products[i]['queryParams'] =
 		}
 		*/
         console.log(products)
-        
+
     }
     const SearchBar = () => (
         <div className="searchBar">
@@ -43,27 +43,27 @@ export default (props) => {
 	}, [products])
 	function handleClick(e, product_id, productTitle) {
 		e.preventDefault()
-		
+
 		props.getTitle(productTitle)
-		
+
 		const id = product_id
 		fetchProduct(id).then((res) => {
 			props.getTitle(res.title)
 			navigate(`/store/products/${res.id}`)
-			
+
 		})
-		
+
 	}
 
 
 
-	
+
 	const search = (val) => {
 		setSearch(val)
 		setSort(200)
 		setShowCategoryPage(false)
-		
-		
+
+
 
 	}
 	const Products = () => {
@@ -72,15 +72,15 @@ export default (props) => {
 		//const sortColor = products.filter(product => console.log(product.variants[0]))
 		return sortItems
 	}
-	
+
 		const searchProduct =() => {
 		const search = () => sortPrice().filter((product ,i) => {
-			
+
 			const query = searchProducts.toLowerCase()
 			const answer =  product.productType.toLowerCase()
-			
+
 			//const actualAnswer = answer(0) + answer(1) + answer(2) + answer(3) + answer(4)
-			
+
 			const pluralQuery = (hoody) => {
 				const newQuery = query.replace(hoody, 'knitwear')
 				return answer.includes(newQuery)
@@ -90,7 +90,7 @@ export default (props) => {
 			}
 			const switchAnswer = () => {
 				switch (true) {
-					
+
 					case query.includes('hoodies'):
 						return pluralQuery('hoodies')
 					case query.includes('hoody'):
@@ -99,14 +99,14 @@ export default (props) => {
 						return answer
 					case pluralAnswer().includes(query):
 							return answer
-					
-					
+
+
 				}
-			
+
 			}
-			
-			
-			
+
+
+
 		return (switchAnswer())
 		}
 		)
@@ -114,45 +114,43 @@ export default (props) => {
 		//product.title.toLowerCase()[i] === searchProducts.toLowerCase()[i] any letter
 		//product.title.toLowerCase()[0] === searchProducts.toLowerCase()[0]) first letter
 		//const sortColor = products.filter(product => console.log(product.variants[0]))
-	
-	
+
+
 	return search()
 		}
-		
-	
-		
+
+
+
 			return (
 				<>
-				
-			
+
+
 				<div className="Product-wrapper">
 				{products && searchProduct &&
 				searchProduct().map((product, i) => {
-					
 
-					
+
+
 					const image = product.images[0]
 					const newImage = image.src.replace('.jpg', '_medium.jpg')
-					
+
 					return (
 						<div className="Product" key={product.id + i}>
-							{image ? (
-								<img src={newImage} alt={`${product.title} product shot`} width="300px" height="175px" />
-							) : null}
+
 							<div className="Product__Info">
 								<h4 className="Product__title">{product.title}</h4>
 								<h5 className="Product__vendor">{product.vendor}</h5>
 								<div className="Product__review">****(15)</div>
 								<p className="Product__price">${product.variants[0].price}</p>
 							</div>
-							
+
 							<button
 								className="Product__buy button"
 								onClick={(e) => handleClick(e, product.id, product.title)}
 							>
-								
+
 							</button>
-							
+
 						</div>
 					)
 				}
@@ -173,8 +171,8 @@ const categoryPage = (category) => {
 	setSearch(category)
 	setSort(200)
 	setShowCategoryPage(false)
-	
-	
+
+
 }
 const CategoryLinks = () => {
 	return (
@@ -207,12 +205,12 @@ const SearchAndSort = () => (
 	<>
 
 	{showCategoryPage === true ? <CategoryLinks /> : <SearchAndSort /> }
-			
-		
+
+
 		<Products />
-			
-			
-			
+
+
+
 		</>
 	)
 }
