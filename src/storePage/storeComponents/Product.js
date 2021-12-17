@@ -136,7 +136,9 @@ export default (props) => {
 
 					return (
 						<div className="Product" key={product.id + i}>
-
+							{image ? (
+								<img src={newImage} alt={`${product.title} product shot`} width="300px" height="175px" />
+							) : null}
 							<div className="Product__Info">
 								<h4 className="Product__title">{product.title}</h4>
 								<h5 className="Product__vendor">{product.vendor}</h5>
