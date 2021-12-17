@@ -14,7 +14,7 @@ const IndexPage = () => {
   const [store, setStore] = useState(false)
 return (
   <Layout title="Small Business Web Design & Development" pageLayout={{gridTemplateRows: "[top-gutter] auto [top-padding] auto [first] auto"}}>
-    {store ? <Store /> : <>
+    {store ?<>ji</> : <>
     <SEO title="Home" />
 <FeatureSection />
 <MoreInfo />
