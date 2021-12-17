@@ -7,5 +7,5 @@ const composeEnhancers = window.__REDUX__DEVTOOLS__EXTENSION__COMPOSE || compose
 
 const rootReducer = combineReducers(reducers)
 const enhancer = composeEnhancers(applyMiddleware(thunk));
-const store = createStore(rootReducer, enhancer)
+const store = createStore(rootReducer,'', enhancer)
 export default store
