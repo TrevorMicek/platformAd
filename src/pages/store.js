@@ -83,7 +83,10 @@ const App = () => {
     return (
         <>
 
-        hi
+        <Router>
+			<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
+
+        </Router>
         </>
     )
 }
