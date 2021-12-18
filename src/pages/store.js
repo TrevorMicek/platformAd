@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
-import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
 import HomeButton from '../components/commonComps/storeHeaderButton'
 
@@ -74,7 +73,7 @@ const App = () => {
         <div className="homeButtonWrapper">
     {switchButton()}
 
-    <Cart create={createCart} title={props.title} homeButton={CartButton} button={getUrl} />
+
  </div>
     )
 
