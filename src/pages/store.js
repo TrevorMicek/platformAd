@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
-import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
 import HomeButton from '../components/commonComps/storeHeaderButton'
@@ -84,7 +83,6 @@ const App = () => {
 hi
         <Router>
 
-			<ProductView path='/store/products/:productId' cart={CartWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
         </>
