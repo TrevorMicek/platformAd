@@ -60,7 +60,7 @@ const App = () => {
 
         <Router>
 			<Products path="/store" title={props.title} getTitle={props.getTitle}   />
-			<ProductView path='/store/products/:productId'  title={props.getTitle}  button={getUrl} />
+
 
         </Router>
         </>
