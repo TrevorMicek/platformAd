@@ -5,6 +5,7 @@ const aboutInfo = {
         secondP: "I also see myself continuing to make more and more business partnerships to increase outreach, and help with scaling up. ",
         thirdP: "In 2-3 years, I see myself branching out to other countries such as Canada or EU members."
       },
+
       sectionTwo : {
         title: 'Tech Goals',
         firstP: "My main goal in tech is to always be learning new things because there's constantly new technologies, and additions to languages. ",

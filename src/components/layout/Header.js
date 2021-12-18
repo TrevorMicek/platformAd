@@ -1,5 +1,9 @@
 import React from 'react';
 
+import storeStyles from '../../styles/StorePage/storeStyles.css'
+import secondStyles from './secondaryHeader.css';
+import firstStyles from '../../styles/FrontPage/headerStyles.css';
+
 import MainHeader from '../tailwindComps/Hero'
 import SecondaryHeader from '../tailwindComps/SecondaryHeader'
 const Header = (props) => {
