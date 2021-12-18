@@ -53,39 +53,14 @@ const App = () => {
 		// fetchCollection()
 	}, [])
     const handleClick = (url) => getUrl(url)
-    const ContinueShopping = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Continue Shopping" onClick={() => handleClick('../../')} />
-    )
-    const CartButton = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="To Store" onClick={() => handleClick('../')} />
-    )
-    const MainHomeButton = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Main Website" onClick={() => handleClick('/')} />
-    )
 
-    const switchButton = () => {
-        switch(linkUrl) {
-            case '/':
-                return <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Main Website" onClick={() => handleClick('/')} />
-            case '../../':
-                return <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Continue Shopping" onClick={() => handleClick('../../')} />
-        }
-    }
-
-    const CartWrapper = () => (
-        <div className="homeButtonWrapper">
-    {switchButton()}
-
-    <Cart create={createCart} title={props.title} homeButton={CartButton} button={getUrl} />
- </div>
-    )
 
     return (
         <>
 
         <Router>
-			<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
-			<ProductView path='/store/products/:productId' cart={CartWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
+			<Products path="/store" title={props.title} getTitle={props.getTitle}   />
+			<ProductView path='/store/products/:productId'  title={props.getTitle}  button={getUrl} />
 
         </Router>
         </>

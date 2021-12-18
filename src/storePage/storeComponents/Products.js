@@ -9,7 +9,7 @@ export default (props) => {
 
 	return (
 		<Layout title='Custom Ecommerce'>
-			{props.cart()}
+
 
 				<div className={styles.app}>
 
