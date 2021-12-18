@@ -14,57 +14,7 @@ import styles from '../styles/StorePage/wrapper.css'
 
 
 const App = () => {
-    const Pages = (props) => {
 
-
-    const [cart, setCart] = useState([])
-    const [cartAmount, setCartAmount] = useState(0)
-    const [linkUrl, setLinkUrl] = useState('/')
-    const getUrl = (url) => setLinkUrl(url)
-	const addToCart = (cartItem) => setCart([...cart, cartItem])
-    const getCart = () => setCartAmount(cart.length)
-
-    const storage = () => JSON.parse(window.localStorage.getItem('cart')) || {}
-
-
-    const handleClick = (url) => getUrl(url)
-    const ContinueShopping = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Continue Shopping" onClick={() => handleClick('../../')} />
-    )
-    const CartButton = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="To Store" onClick={() => handleClick('../')} />
-    )
-    const MainHomeButton = () => (
-        <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Main Website" onClick={() => handleClick('/')} />
-    )
-
-    const switchButton = () => {
-        switch(linkUrl) {
-            case '/':
-                return <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Main Website" onClick={() => handleClick('/')} />
-            case '../../':
-                return <HomeButton linkUrl={linkUrl} geturl={getUrl} title="Continue Shopping" onClick={() => handleClick('../../')} />
-        }
-    }
-
-    const CartWrapper = () => (
-        <div className="homeButtonWrapper">
-    {switchButton()}
-
-
- </div>
-    )
-
-    return (
-        <>
-hi
-        <Router>
-
-
-        </Router>
-        </>
-    )
-}
 const Store = () => {
     const initialTitle = 'Custom Ecommerce'
     const [pageTitle, setPageTitle] = useState(initialTitle)
