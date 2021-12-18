@@ -31,8 +31,7 @@ return (
     <SEO title="Online Store" />
 
 
-        <Pages title={pageTitle} getTitle={getTitle} />
-
+       hi
 
    </div>
 )
