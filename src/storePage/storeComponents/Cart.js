@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import LineItem from "./LineItem"
+
 import { useShopify } from "../hooks"
 import { MdShoppingCart, MdRemoveShoppingCart } from "react-icons/md"
 
@@ -75,7 +75,7 @@ export default (props) => {
 					</button>
 				</header>
 				<ul className="Cart__line-items">
-					<LineItem />
+
 				</ul>
 				<footer className="Cart__footer">
 					<div className="Cart-info clearfix">
