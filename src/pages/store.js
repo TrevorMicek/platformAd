@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
-import Products from "../storePage/storeComponents/Products"
 import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
