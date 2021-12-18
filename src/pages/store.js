@@ -84,7 +84,7 @@ const App = () => {
         <>
 
         <Router>
-
+			<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
 			<ProductView path='/store/products/:productId' cart={CartWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
