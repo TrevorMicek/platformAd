@@ -6,7 +6,6 @@ import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
 import createComponent from '../components/commonComps/createCart'
 import HomeButton from '../components/commonComps/storeHeaderButton'
-
 import { useShopify } from "../storePage/hooks"
 
 import { Provider } from "react-redux"
