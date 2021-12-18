@@ -126,7 +126,8 @@ export default (props) => {
 
 
 				<div className="Product-wrapper">
-				{products && products.map((product, i) => {
+				{products && searchProduct &&
+				searchProduct().map((product, i) => {
 
 
 
