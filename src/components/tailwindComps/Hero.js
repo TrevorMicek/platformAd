@@ -32,6 +32,8 @@ export default function HeroComp() {
                     className="h-8 w-auto sm:h-10"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt=""
+                    width="50px"
+                    height="50px"
                   />
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
