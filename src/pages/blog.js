@@ -10,8 +10,6 @@ import CategoryData from '../data/blogPage/CategoryData'
 import basics from "../data/blogPage/blogPostData/basics"
 import CreateComponent from "../components/commonComps/createComponent"
 import Events from "../data/blogPage/Categories";
-import blogPosts from '../data/blogPage/blogPosts'
-import info from '../data/blogPage/tempData'
 const IndexPage = () => {
   const [eventPage, setEventPage] = useState('Basics')
 

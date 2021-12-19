@@ -4,7 +4,7 @@ import { navigate, useMatch } from "@reach/router"
 
 import Layout from '../../components/layout/layout'
 import { useShopify } from "../hooks"
-import { create } from "lodash"
+
 
 export default (props) => {
 
