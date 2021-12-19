@@ -5,7 +5,6 @@ import SEO from "../components/layout/seo"
 
 import MainSectionTitle from '../components/commonComps/MainSectionTitle'
 import styles from '../styles/ServicesPage/mainStyles.css';
-import Categories from '../components/pages/blogPage/BlogCategories'
 import CategoryData from '../data/blogPage/CategoryData'
 import basics from "../data/blogPage/blogPostData/basics"
 import CreateComponent from "../components/commonComps/createComponent"
