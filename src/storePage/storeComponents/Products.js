@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Link } from 'gatsby'
 import Product from "./Product"
-import Header from './Header'
+
 import Layout from '../../components/layout/layout'
-import styles from '../../styles/StorePage/wrapper.css'
 export default (props) => {
 
 
@@ -11,7 +10,7 @@ export default (props) => {
 		<Layout title='Custom Ecommerce'>
 			{props.cart()}
 
-				<div className={styles.app}>
+				<div >
 
 		<div className="Products-wrapper">
 

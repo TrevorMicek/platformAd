@@ -11,11 +11,8 @@ import { useShopify } from "../storePage/hooks"
 
 import { Provider } from "react-redux"
 
-import "../styles/StorePage/app.css"
 
-import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
-import styles from '../styles/StorePage/wrapper.css'
 
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"
@@ -105,7 +102,7 @@ const Store = () => {
     const store = createStore(rootReducer, enhancer);
 return (
 
-    <div className={styles.wrapper}>
+    <div >
     <SEO title="Online Store" />
 
 	<Provider store={store}>

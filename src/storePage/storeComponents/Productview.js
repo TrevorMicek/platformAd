@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react"
 
 import { navigate, useMatch } from "@reach/router"
-import Header from './Header'
+
 import Layout from '../../components/layout/layout'
 import { useShopify } from "../hooks"
 import { create } from "lodash"
-import styles from '../../styles/StorePage/wrapper.css'
 
 export default (props) => {
 
@@ -91,7 +90,7 @@ export default (props) => {
 	return (
 		<Layout title={product.title}>
 			{props.cart()}
-		<div className={styles.app}>
+		<div >
 		<div id="individualProduct">
 
 
