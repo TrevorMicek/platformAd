@@ -80,6 +80,8 @@ export default function HeroComp() {
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt=""
+                    width="50px"
+                    height="50px"
                   />
                 </div>
                 <div className="-mr-2">
@@ -188,6 +190,8 @@ export default function HeroComp() {
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                     src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
                     alt=""
+                    width="200px"
+                    height="100px"
                   />
                 </div>
               </div>
