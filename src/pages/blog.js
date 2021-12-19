@@ -33,7 +33,7 @@ const IndexPage = () => {
               return <>
                <MainSectionTitle {...CategoryData.one} />
               <Events year='Basics' page={eventPage} changeYear={setEventPage} />
-              <CreateComponent component={Categories} data={basics} />
+              <CreateComponent component={'div'} data={basics} />
               </>
       }
   }
