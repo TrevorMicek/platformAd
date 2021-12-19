@@ -40,7 +40,7 @@ return(
         </section>
       </section>
       <section class="secondSection">
-          <CreateComponent component={Section} data={info} />
+          <CreateComponent component={'div'} data={info} />
       </section>
   </Layout>
 )
