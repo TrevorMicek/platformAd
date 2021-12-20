@@ -173,7 +173,7 @@ export default function Header(props) {
               <span className="block text-indigo-400 xl:inline">{props.title ? Title()[1] : ''}</span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Websites By Trevor takes pride in our quality of website, as well as facilitating a nurturing customer support system.
+              {props.text}
             </p>
 
           </div>

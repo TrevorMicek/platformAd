@@ -18,7 +18,7 @@ import HeroComp from "../tailwindComps/Hero";
 import createComponent from '../commonComps/createCart'
 import "./layoutGrid.css"
 import "./layout.css"
-const Layout = ({children, title, pageLayout}) => {
+const Layout = ({children, title, text, pageLayout}) => {
 
 
   /*
@@ -48,7 +48,7 @@ const Layout = ({children, title, pageLayout}) => {
       >
 
        <div class="grid">
-        <Header title={title} />
+        <Header title={title} text={text} />
 
 
         <main style={pageLayout}  class="main">{children}</main>

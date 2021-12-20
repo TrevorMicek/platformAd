@@ -43,7 +43,7 @@ const Header = (props) => {
         case firstTitle:
           return <MainHeader />
         case secondTitle:
-          return <SecondaryHeader title={props.title} />
+          return <SecondaryHeader title={props.title} text={props.text} />
         default:
           return <StoreHeader />
     }
