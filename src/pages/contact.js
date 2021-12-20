@@ -9,6 +9,7 @@ const IndexPage = () => (
   <Layout title="Contact">
     <SEO title="Home" />
     <Form />
+
   </Layout>
 )
 export default IndexPage

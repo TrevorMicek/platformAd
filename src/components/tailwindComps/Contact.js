@@ -1,6 +1,4 @@
-import React from 'react'
-
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Switch } from '@headlessui/react'
 
 function classNames(...classes) {
@@ -11,8 +9,8 @@ export default function Example() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24" style={{gridColumn:"span 7"}}>
-      <div className="relative max-w-xl mx-auto">
+    <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+      <div className="relative max-w-xl mx-auto" >
         <svg
           className="absolute left-full transform translate-x-1/2"
           width={404}
@@ -58,14 +56,13 @@ export default function Example() {
           <rect width={404} height={404} fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
         </svg>
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Questions, Comments, Concerns?</h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
-            arcu.
+            We will get back to you by the end of the day!
           </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form action="#" method="POST" className="sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                 First name
@@ -76,7 +73,7 @@ export default function Example() {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
             </div>
@@ -90,7 +87,7 @@ export default function Example() {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
             </div>
@@ -104,7 +101,7 @@ export default function Example() {
                   name="company"
                   id="company"
                   autoComplete="organization"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
             </div>
@@ -118,7 +115,7 @@ export default function Example() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
             </div>
@@ -146,7 +143,7 @@ export default function Example() {
                   name="phone-number"
                   id="phone-number"
                   autoComplete="tel"
-                  className="py-3 px-4 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="+1 (555) 987-6543"
                 />
               </div>
@@ -160,7 +157,7 @@ export default function Example() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
               </div>

@@ -5,11 +5,35 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Why should I have a website?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
-  // More questions...
+  {
+    question: "How do I bring traffic to my site?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "How to make my site faster NOW?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Should I try to do my own website or hire a web developer?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "What's the cost of a website?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "What makes Websites By Trevor different?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
 ]
 
 function classNames(...classes) {
@@ -19,7 +43,7 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <div className="bg-gray-50" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pb-8 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">

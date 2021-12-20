@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { ChevronDoubleDownIcon } from '@heroicons/react/outline'
 const officeImg = require('../../images/coding7.jpg')
-const metricsImg = require('../../images/metrics.jpg')
+const metricsImg = require('../../images/metric.png')
 
 export default function Example() {
   const [learnMore, setLearnMore] = useState(false)
@@ -33,15 +33,15 @@ export default function Example() {
               <p className="mt-8 max-w-2xl text-lg text-gray-500">
                 Our main focus is small businesses that have a website they made with a page builder, yet are looking for something that isn't so slow, isn't so templated, & isn't so expensive.
               </p>
-              <div className="mt-5 prose prose-indigo text-gray-500">
-                <p className="max-w-2xl">
+              <div className="mt-5 prose prose-indigo text-gray-900">
+                <p className="max-w-2xl text-gray-900">
                   We are actively trying to bridge the gap between page built websites that are great for starting out, and websites you'd see at a mid-sized business.
                   When you need something better there's only expensive options. This is where we excel & this is why we do what we do; to make fast, high quality websites that are affordable to small businesses like you.
                 </p>
-                <ul role="list">
-                  <li>Our websites often score two to three times as fast on page load times.</li>
-                  <li>Every website we make is uniquely hand coded to your liking & branding.</li>
-                  <li>Our prices are roughly half the cost of other designers & developers.</li>
+                <ul role="list text-gray-500">
+                  <li class="text-gray-600">Our websites always score two to three times as fast on page load times.</li>
+                  <li class="text-gray-600">Every website we make is uniquely hand coded to your liking & branding.</li>
+                  <li class="text-gray-600">Our prices are roughly half the cost of other designers & developers.</li>
                 </ul>
                 {
                   learnMore ? <>
@@ -58,14 +58,14 @@ export default function Example() {
 
                 <h3>How we make better websites</h3>
                 <p className="max-w-2xl">
-                  We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our bigger upfront costs very affordable for any client.
+                  We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our upfront costs very affordable for any client.
                 </p>
                 <p className="max-w-2xl">
-                  Each client is directed to <a href="https://html5up.net">This Site</a> to pick out a design they like. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
+                  Each client is directed to <a href="https://html5up.net">This Site</a> as a starting point. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
                   We then recreate the design you picked with many elements of the other websites including your current website so that we have a brand new, completely unique website.
                 </p>
                 <p className="max-w-2xl">
-                  We will have multi-weekly meetings to discuss the design and direction of the website to further tailor the site to your business.
+                  We spend multiple hours per website optimizing it to have 95-100 scores according to google, meaning our websites out perform your competitors website's.
                 </p>
                 <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fcustomcode.netlify.app%2F">
                 <img
