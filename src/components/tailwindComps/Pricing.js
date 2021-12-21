@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import Confirm from './Confirmation'
 import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
 const ecommercePlans = [
@@ -154,6 +155,7 @@ function classNames(...classes) {
 }
 
 export default function Pricing() {
+  const [confirm, setConfirm] = useState(false)
   const [packages, setPackages] = useState('ecom')
   const PackageToggle = () => (
     <>
@@ -203,8 +205,10 @@ export default function Pricing() {
                     </p>
                   </div>
                 </div>
+                {confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
                 <a
-                  href={plan.link}
+                  href={plan.link ? plan.link : null}
+                  onClick={!plan.link ? () => setConfirm(true) : null}
                   className={classNames(
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
