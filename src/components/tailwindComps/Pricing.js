@@ -26,6 +26,7 @@ const ecommercePlans = [
     priceMonthly: 900,
     priceYearly: 90,
     pages: 1,
+    link: 'https://buy.stripe.com/6oE7sUchY4Ck45a144',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'More customers find you' },
@@ -42,6 +43,7 @@ const ecommercePlans = [
     priceMonthly: 4500,
     priceYearly: 325,
     pages: 6,
+    link: 'https://buy.stripe.com/bIY28A2Hoc4MatyfYZ',
     mainFeatures: [
       { id: 1, value: 'Revenue directly from site' },
       { id: 2, value: 'Better leads & conversions' },
@@ -62,6 +64,7 @@ const ecommercePlans = [
     priceMonthly: 2450,
     priceYearly: 205,
     pages: 6,
+    link: 'https://buy.stripe.com/aEUeVmchY5GoeJO5km',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'Fits all business info' },
@@ -98,6 +101,7 @@ const standardPlans = [
     priceMonthly: 615,
     priceYearly: 45,
     pages: 1,
+    link: 'https://buy.stripe.com/14kcNe95Mgl259eaEH',
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
       { id: 2, value: 'Sell servies directly on site'},
@@ -114,6 +118,7 @@ const standardPlans = [
     priceMonthly: 2450,
     priceYearly: 175,
     pages: 5,
+    link: 'https://buy.stripe.com/28odRigyefgYbxC5ko',
     mainFeatures: [
       { id: 1, value: 'Better leads & conversions' },
       { id: 2, value: 'Sell services directly on site' },
@@ -130,6 +135,7 @@ const standardPlans = [
     description: 'Convenient features to take your business to the next level.',
     priceMonthly: 1700,
     priceYearly: 175,
+    link: 'https://buy.stripe.com/28odRigyefgYbxC5ko',
     pages: 5,
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
@@ -176,7 +182,7 @@ export default function Pricing() {
                   'text-sm font-semibold uppercase tracking-wide'
                 )}
               >
-                {plan.title} <br />{plan.pages} pages
+                {plan.title} <br />{plan.pages} {plan.pages === 1 ? 'page' : 'pages'}
               </h3>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
                 <div className="mt-3 flex items-center">
@@ -198,7 +204,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <a
-                  href="#"
+                  href={plan.link}
                   className={classNames(
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'

@@ -53,10 +53,10 @@ export default function Header(props) {
                     height="50px"
                   />
                 </a>
-                <div className="flex items-center md:hidden">
+                <div className="flex items-center md:hidden relative bottom-3">
                   <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="relative bottom-3 h-7 w-7" aria-hidden="true" />
+                    <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Header(props) {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>

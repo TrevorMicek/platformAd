@@ -2,11 +2,11 @@ import React from 'react'
 
 const navigation = {
     main: [
-      { name: 'Home', href: '#' },
-      { name: 'Product', href: '#' },
-      { name: 'Pricing', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Contact', href: '#' }
+      { name: 'Home', href: '/' },
+      { name: 'Product', href: '/product' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' }
     ],
     social: [
       {

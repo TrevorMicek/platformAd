@@ -51,17 +51,7 @@ export default function HeroComp() {
                 ))}
               </div>
             </div>
-            <div className="hidden md:flex md:items-center md:space-x-6">
-              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
-                Log in
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-              >
-                Start free package
-              </a>
-            </div>
+
           </nav>
         </div>
 
@@ -107,7 +97,7 @@ export default function HeroComp() {
                 </div>
                 <div className="mt-6 px-5">
                   <a
-                    href="#"
+                    href="https://buy.stripe.com/14k3cEbdU8SA0SY28d"
                     className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
                   >
                     Start free package
