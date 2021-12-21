@@ -159,6 +159,7 @@ export default function Pricing() {
   const [packages, setPackages] = useState('ecom')
   const PackageToggle = () => (
     <>
+
     {
       packages === 'ecom' ?
       <div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
@@ -167,7 +168,7 @@ export default function Pricing() {
         aria-hidden="true"
         className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
       />
-
+ {confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
       <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
         {ecommercePlans.map((plan) => (
           <div
@@ -205,7 +206,7 @@ export default function Pricing() {
                     </p>
                   </div>
                 </div>
-                {confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
+
                 <a
                   href={plan.link ? plan.link : null}
                   onClick={!plan.link ? () => setConfirm(true) : null}
@@ -218,6 +219,7 @@ export default function Pricing() {
                 >
                   {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
                 </a>
+
               </div>
             </div>
             <h4 className="sr-only">Features</h4>
@@ -261,7 +263,7 @@ export default function Pricing() {
   aria-hidden="true"
   className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
 />
-
+{confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
 <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
   {standardPlans.map((plan) => (
     <div
@@ -300,7 +302,8 @@ export default function Pricing() {
             </div>
           </div>
           <a
-            href="#"
+            href={plan.link ? plan.link : null}
+            onClick={!plan.link ? () => setConfirm(true) : null}
             className={classNames(
               plan.featured
                 ? 'bg-indigo-600 text-white hover:bg-indigo-700'
