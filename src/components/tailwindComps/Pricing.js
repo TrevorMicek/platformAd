@@ -8,7 +8,7 @@ const ecommercePlans = [
     featured: false,
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 0,
-    priceYearly: 30,
+    priceYearly: 0,
     pages: 1,
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
@@ -64,7 +64,7 @@ const ecommercePlans = [
     pages: 6,
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
-      { id: 2, value: 'Fits most business info' },
+      { id: 2, value: 'Fits all business info' },
       { id: 3, value: 'Link all your assets' },
       { id: 4, value: 'Partial ecommerce solution' },
       { id: 5, value: 'Secures sensitive data' },
