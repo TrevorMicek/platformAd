@@ -5,17 +5,20 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const defaultQ = [
   {
-    question: "Why should I have a website?",
-    answer:
-      "Not everyone needs a website, and not everyone needs a fast website, but if you want to have a solid online presence, social media isn't enough. Our websites allow your business to offer your services or products to your clients. Meaning you can make money directly from your site.",
+
   }
 ]
 const faqs = [
-
+  {
+  question: "Why should I have a website?",
+  answer: "Not everyone needs a website, and not everyone needs a fast website, but if you want to have a solid online presence, social media isn't enough. Our websites allow your business to offer your services or products to your clients. Meaning you can make money directly from your site.",
+  open: true
+  },
   {
     question: "How do I bring traffic to my site?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+
   },
   {
     question: "How to make my site faster NOW?",
@@ -52,7 +55,7 @@ export default function Example() {
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
 
             {faqs.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6">
+              <Disclosure as="div" defaultOpen={faq.open} key={faq.question} className="pt-6">
 
                 {({ open }) => (
                   <>
