@@ -9,10 +9,14 @@ const ecommercePlans = [
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 0,
     priceYearly: 30,
+    pages: 1,
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'Fits most business info' },
       { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Buy buttons instead of cart' },
     ],
   },
   {
@@ -21,10 +25,14 @@ const ecommercePlans = [
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 900,
     priceYearly: 90,
+    pages: 1,
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
       { id: 2, value: 'More customers find you' },
       { id: 3, value: 'Fits most business info' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Cart & checkout pages' },
     ],
   },
   {
@@ -33,13 +41,18 @@ const ecommercePlans = [
     description: 'The best financial services for your thriving business.',
     priceMonthly: 4500,
     priceYearly: 325,
+    pages: 6,
     mainFeatures: [
       { id: 1, value: 'Revenue directly from site' },
       { id: 2, value: 'Better leads & conversions' },
       { id: 3, value: 'Fits all business info' },
       { id: 4, value: 'Link all your assets' },
-      { id: 5, value: 'VAT & VATMOSS filing' },
-      { id: 6, value: 'Free bank transfers' },
+      { id: 5, value: 'Full ecommerce solution' },
+      { id: 6, value: 'Better user experience' },
+      { id: 7, value: 'Secures sensitive data' },
+      { id: 8, value: 'Easily scalable' },
+      { id: 9, value: 'Inventory management included' },
+      { id: 10, value: 'Cart & checkout pages' },
     ],
   },
   {
@@ -48,11 +61,14 @@ const ecommercePlans = [
     description: 'Convenient features to take your business to the next level.',
     priceMonthly: 2450,
     priceYearly: 205,
+    pages: 6,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
+      { id: 1, value: 'Start selling online NOW' },
+      { id: 2, value: 'Fits most business info' },
+      { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Buy buttons instead of cart' },
     ],
   },
 ]
@@ -195,10 +211,14 @@ const standardPlans = [
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 0,
     priceYearly: 0,
+    pages: 1,
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
       { id: 2, value: 'Fits most business info' },
       { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial website solution' },
+      { id: 5, value: 'Prioritize important info' },
+      { id: 6, value: 'Centralized business info' },
     ],
   },
   {
@@ -207,10 +227,14 @@ const standardPlans = [
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 615,
     priceYearly: 45,
+    pages: 1,
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
-      { id: 2, value: 'Fits most business info' },
-      { id: 3, value: 'Link all your assets' },
+      { id: 2, value: 'Sell servies directly on site'},
+      { id: 3, value: 'Fits most business info' },
+      { id: 4, value: 'Link all your assets' },
+      { id: 5, value: 'Partial website solution' },
+      { id: 6, value: 'Centralized business info' },
     ],
   },
   {
@@ -219,13 +243,15 @@ const standardPlans = [
     description: 'The best financial services for your thriving business.',
     priceMonthly: 2450,
     priceYearly: 175,
+    pages: 5,
     mainFeatures: [
       { id: 1, value: 'Better leads & conversions' },
-      { id: 2, value: 'Customers easily find you' },
-      { id: 3, value: 'Sell services directly on site' },
+      { id: 2, value: 'Sell services directly on site' },
+      { id: 3, value: 'Customers easily find you' },
       { id: 4, value: 'Fits all business info' },
-      { id: 5, value: 'Link all your assets' },
-      { id: 6, value: 'Free bank transfers' },
+      { id: 5, value: 'Full website solution' },
+      { id: 6, value: 'Easily scalable' },
+      { id: 7, value: 'Centralized business info' },
     ],
   },
   {
@@ -234,11 +260,14 @@ const standardPlans = [
     description: 'Convenient features to take your business to the next level.',
     priceMonthly: 1700,
     priceYearly: 175,
+    pages: 5,
     mainFeatures: [
-      { id: 1, value: 'Basic invoicing' },
-      { id: 2, value: 'Easy to use accounting' },
-      { id: 3, value: 'Mutli-accounts' },
-      { id: 4, value: 'Tax planning toolkit' },
+      { id: 1, value: 'Start your online presence' },
+      { id: 2, value: 'Full website solution'},
+      { id: 3, value: 'Fits all business info' },
+      { id: 4, value: 'Link all your assets' },
+      { id: 5, value: 'Easily scalable' },
+      { id: 6, value: 'Centralized business info' },
     ],
   },
 ]
@@ -406,7 +435,7 @@ export default function Pricing() {
                   'text-sm font-semibold uppercase tracking-wide'
                 )}
               >
-                {plan.title}
+                {plan.title} <br />{plan.pages} pages
               </h3>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
                 <div className="mt-3 flex items-center">
@@ -451,7 +480,7 @@ export default function Pricing() {
               )}
             >
               {plan.mainFeatures.map((mainFeature) => (
-                <li key={mainFeature.id} className="py-3 flex items-center">
+                <li key={mainFeature.id} className="py-2 flex items-center">
                   <CheckIcon
                     className={classNames(
                       plan.featured ? 'text-indigo-500' : 'text-indigo-200',
