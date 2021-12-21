@@ -3,12 +3,15 @@ import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 
-const faqs = [
+const defaultQ = [
   {
     question: "Why should I have a website?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
+      "Not everyone needs a website, and not everyone needs a fast website, but if you want to have a solid online presence, social media isn't enough. Our websites allow your business to offer your services or products to your clients. Meaning you can make money directly from your site.",
+  }
+]
+const faqs = [
+
   {
     question: "How do I bring traffic to my site?",
     answer:
@@ -47,8 +50,10 @@ export default function Example() {
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
+
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
