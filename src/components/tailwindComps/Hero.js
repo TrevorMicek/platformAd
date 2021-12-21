@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
+import Confirm from './Confirmation'
 import { Link } from "gatsby"
 const navigation = [
   { name: 'Home', href: '/' },
@@ -15,6 +16,10 @@ const navigation = [
 ]
 
 export default function HeroComp() {
+  const [confirm, setConfirm] = useState(false)
+  const sendForm = (e) => {
+    return e.preventDefault
+  }
   return (
 
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
@@ -141,7 +146,8 @@ export default function HeroComp() {
                   High quality websites for business services. Customized to your clients.
                   </p>
                   <div className="mt-10 sm:mt-12">
-                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                    {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
+                    <form action={sendForm} className="sm:max-w-xl sm:mx-auto lg:mx-0">
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
                           <label htmlFor="email" className="sr-only">
@@ -156,7 +162,8 @@ export default function HeroComp() {
                         </div>
                         <div className="mt-3 sm:mt-0 sm:ml-3">
                           <button
-                            type="submit"
+                            type="button"
+                            onClick={() => setConfirm(true)}
                             className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                           >
                             Start free package
