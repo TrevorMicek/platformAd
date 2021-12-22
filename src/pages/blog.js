@@ -9,7 +9,9 @@ import CategoryData from '../data/blogPage/CategoryData'
 import basics from "../data/blogPage/blogPostData/basics"
 import CreateComponent from "../components/commonComps/createComponent"
 import Events from "../data/blogPage/Categories";
+import BlogSection from '../components/tailwindComps/BlogSection'
 const IndexPage = () => {
+  /*
   const [eventPage, setEventPage] = useState('Basics')
 
   const SwitchEventPage = () => {
@@ -36,15 +38,14 @@ const IndexPage = () => {
               <CreateComponent component={'div'} data={basics} />
               </>
       }
-  }
+  }*/
   return (
-  <Layout title="Learn About Websites">
+  <Layout title="Blog" text="Learn About Web Design, SEO, Ecommerce & More!">
     <SEO title="Blog" />
-    <div className={styles.secondSection}>
 
-      <SwitchEventPage />
+      <BlogSection />
 
-    </div>
+
   </Layout>
   )
   }

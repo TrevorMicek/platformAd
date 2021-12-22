@@ -21,7 +21,7 @@ export default function Header(props) {
       case 'Pricing':
         return ['Pricing plans for', 'businesses of all sizes']
       case 'Blog':
-        return ['Personalized websites', 'for your business']
+        return ['Tips & Tricks', 'For a Better Website']
       case 'Contact':
         return ['Contact', 'Websites By Trevor']
     }

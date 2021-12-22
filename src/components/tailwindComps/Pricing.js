@@ -280,7 +280,7 @@ export default function Pricing() {
             'text-sm font-semibold uppercase tracking-wide'
           )}
         >
-          {plan.title} <br />{plan.pages} pages
+          {plan.title} <br />{plan.pages} {plan.pages === 1 ? 'page' : 'pages'}
         </h3>
         <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
           <div className="mt-3 flex items-center">
