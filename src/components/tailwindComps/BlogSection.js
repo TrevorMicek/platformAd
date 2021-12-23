@@ -71,7 +71,6 @@ const posts = [
              We have four series that go into the different and unique aspects of a website. Easily find good information on the topics you need or if you're new to it all go for the basics where we only talk in simple terms that are easy to understand.
             </p>
           </div>
-
     <span className="relative z-0 inline-flex shadow-sm rounded-md">
       <button
         type="button"
