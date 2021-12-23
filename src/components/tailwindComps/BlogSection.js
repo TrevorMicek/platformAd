@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 /* This example requires Tailwind CSS v2.0+ */
-const posts = [
+const basicPosts = [
     {
       title: 'Boost your conversion rate',
       href: '#',
@@ -57,8 +57,220 @@ const posts = [
       },
     },
   ]
-
+  const seoPosts = [
+    {
+      title: 'Boost your SEO conversion rate',
+      href: '#',
+      category: { name: 'Article', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+      date: 'Mar 16, 2020',
+      datetime: '2020-03-16',
+      imageUrl:
+        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '6 min',
+      author: {
+        name: 'Roel Aufderehar',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'How to use search engine optimization to drive sales',
+      href: '#',
+      category: { name: 'Video', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+      date: 'Mar 10, 2020',
+      datetime: '2020-03-10',
+      imageUrl:
+        'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '4 min',
+      author: {
+        name: 'Brenna Goyette',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'Improve your customer experience',
+      href: '#',
+      category: { name: 'Case Study', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+      date: 'Feb 12, 2020',
+      datetime: '2020-02-12',
+      imageUrl:
+        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '11 min',
+      author: {
+        name: 'Daniela Metz',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+  ]
+  const designPosts = [
+    {
+      title: 'Boost your design conversion rate',
+      href: '#',
+      category: { name: 'Article', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+      date: 'Mar 16, 2020',
+      datetime: '2020-03-16',
+      imageUrl:
+        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '6 min',
+      author: {
+        name: 'Roel Aufderehar',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'How to use search engine optimization to drive sales',
+      href: '#',
+      category: { name: 'Video', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+      date: 'Mar 10, 2020',
+      datetime: '2020-03-10',
+      imageUrl:
+        'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '4 min',
+      author: {
+        name: 'Brenna Goyette',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'Improve your customer experience',
+      href: '#',
+      category: { name: 'Case Study', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+      date: 'Feb 12, 2020',
+      datetime: '2020-02-12',
+      imageUrl:
+        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '11 min',
+      author: {
+        name: 'Daniela Metz',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+  ]
+  const ecomPosts = [
+    {
+      title: 'Boost your Ecom conversion rate',
+      href: '#',
+      category: { name: 'Article', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+      date: 'Mar 16, 2020',
+      datetime: '2020-03-16',
+      imageUrl:
+        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '6 min',
+      author: {
+        name: 'Roel Aufderehar',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'How to use search engine optimization to drive sales',
+      href: '#',
+      category: { name: 'Video', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+      date: 'Mar 10, 2020',
+      datetime: '2020-03-10',
+      imageUrl:
+        'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '4 min',
+      author: {
+        name: 'Brenna Goyette',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+    {
+      title: 'Improve your customer experience',
+      href: '#',
+      category: { name: 'Case Study', href: '#' },
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+      date: 'Feb 12, 2020',
+      datetime: '2020-02-12',
+      imageUrl:
+        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      readingTime: '11 min',
+      author: {
+        name: 'Daniela Metz',
+        href: '#',
+        imageUrl:
+          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
+    },
+  ]
   export default function Example() {
+    const [post, setPost] = useState(basicPosts)
+    const Posts = () => ( <>
+      {post.map((post) => (
+        <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <div className="flex-shrink-0">
+            <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+          </div>
+          <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div className="flex-1">
+              <p className="text-sm font-medium text-indigo-600">
+                <a href={post.category.href} className="hover:underline">
+                  {post.category.name}
+                </a>
+              </p>
+              <a href={post.href} className="block mt-2">
+                <p className="text-xl font-semibold text-gray-900">{post.title}</p>
+                <p className="mt-3 text-base text-gray-500">{post.description}</p>
+              </a>
+            </div>
+            <div className="mt-6 flex items-center">
+              <div className="flex-shrink-0">
+                <a href={post.author.href}>
+                  <span className="sr-only">{post.author.name}</span>
+                  <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
+                </a>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm font-medium text-gray-900">
+                  <a href={post.author.href} className="hover:underline">
+                    {post.author.name}
+                  </a>
+                </p>
+                <div className="flex space-x-1 text-sm text-gray-500">
+                  <time dateTime={post.datetime}>{post.date}</time>
+                  <span aria-hidden="true">&middot;</span>
+                  <span>{post.readingTime} read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+      </>
+    )
+
     return (
       <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
         <div className="absolute inset-0">
@@ -70,76 +282,42 @@ const posts = [
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
              We have four series that go into the different and unique aspects of a website. Easily find good information on the topics you need or if you're new to it all go for the basics where we only talk in simple terms that are easy to understand.
             </p>
-          </div>
-    <span className="relative z-0 inline-flex shadow-sm rounded-md">
+            <span className="relative z-0 inline-flex shadow-sm rounded-md">
       <button
         type="button"
+        onClick={() => setPost(basicPosts)}
         className="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
       >
         Basics
       </button>
       <button
         type="button"
+        onClick={() => setPost(seoPosts)}
         className="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
       >
         SEO
       </button>
       <button
         type="button"
+        onClick={() => setPost(designPosts)}
         className="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
       >
         Web Design
       </button>
       <button
         type="button"
+        onClick={() => setPost(ecomPosts)}
         className="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
       >
         Ecommerce
       </button>
     </span>
+          </div>
+
 
 
           <div className="mt-12 max-w-lg mx-auto lg:max-w-none">
-            {posts.map((post) => (
-              <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-indigo-600">
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
-                      </a>
-                    </p>
-                    <a href={post.href} className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{post.description}</p>
-                    </a>
-                  </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <a href={post.author.href}>
-                        <span className="sr-only">{post.author.name}</span>
-                        <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
-                      </a>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.datetime}>{post.date}</time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.readingTime} read</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <Posts />
           </div>
         </div>
       </div>
