@@ -11,7 +11,6 @@ import { useShopify } from "../storePage/hooks"
 
 import { Provider } from "react-redux"
 
-import "../styles/StorePage/app.css"
 
 import SEO from "../components/layout/seo"
 import styles from '../styles/StorePage/wrapper.css'

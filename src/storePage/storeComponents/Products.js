@@ -7,7 +7,7 @@ export default (props) => {
 
 
 	return (
-		<Layout title='Custom Ecommerce'>
+		<>
 			{props.cart()}
 
 				<div >
@@ -24,6 +24,6 @@ export default (props) => {
 
 		</div>
 		</div>
-		</Layout>
+		</>
 	)
 }
