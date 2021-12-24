@@ -140,10 +140,10 @@ export default function HeroComp() {
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">Wholesale Custom</span>
-                    <span className="block text-indigo-400">Ecommerce Websites</span>
+                    <span className="block text-sky-600">Ecommerce Websites</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
-                  High quality websites for business services. Customized to your clients.
+                  High quality websites for business services. <br /> Start offering customized sites to your clients.
                   </p>
                   <div className="mt-10 sm:mt-12">
                     {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}

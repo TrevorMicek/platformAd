@@ -23,17 +23,17 @@ const faqs = [
   {
     question: "How to make my site faster NOW?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "There are some straightforward ways to boost performance on your site today. The main things being; image optimization, lazy loading styles, images & scripts, limiting number of scripts(plugins), ",
   },
   {
     question: "Should I try to do my own website or hire a web developer?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "If you're just starting out, or on a tight budget, building your own with a popular page builder like Shopify, Wordpress, or Wix, is the best way to go. But when you don't have the time, or you need a high quality and fast website, you absolutely need a developer to achieve that. Read more about finding the right dev.",
   },
   {
     question: "What's the cost of a website?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "and coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's run $8,700 for service businesses and $16,000 for ecommerce. This is because we spend 100-200 hours per website and use highly customized and quality web design and optimize every section. To make our sites more affordable, we have created a new pricing model.",
   },
   {
     question: "What makes Websites By Trevor different?",

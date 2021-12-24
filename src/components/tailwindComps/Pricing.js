@@ -26,7 +26,7 @@ const ecommercePlans = [
     description: 'All your essential business finances, taken care of.',
     priceMonthly: 900,
     priceYearly: 90,
-    pages: 1,
+    pages: 2,
     link: 'https://buy.stripe.com/6oE7sUchY4Ck45a144',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },

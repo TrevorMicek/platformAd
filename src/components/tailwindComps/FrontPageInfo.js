@@ -36,7 +36,7 @@ export default function Example() {
               <div className="mt-5 prose prose-indigo text-gray-900">
                 <p className="max-w-2xl text-gray-900">
                   We are actively trying to bridge the gap between page built websites that are great for starting out, and websites you'd see at a mid-sized business.
-                  When you need something better there's only expensive options. This is where we excel & this is why we do what we do; to make fast, high quality websites that are affordable to small businesses like you.
+                  When you need something better there's only expensive options. This is where we excel & this is why we do what we do; to make fast, high quality websites that are affordable to small businesses like your clients.
                 </p>
                 <ul role="list text-gray-500">
                   <li class="text-gray-600">Our websites always score two to three times as fast on page load times.</li>
@@ -61,7 +61,7 @@ export default function Example() {
                   We achieve these three feats through our single page applications, which are known for having better user experience, faster pages and are great for bigger websites, like an online store. We also spend a lot of time creating new designs for each client, as well as our unique pricing model that makes our upfront costs very affordable for any client.
                 </p>
                 <p className="max-w-2xl">
-                  Each client is directed to <a href="https://html5up.net">This Site</a> as a starting point. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
+                  Each client is directed to <a href="https://html5up.net">This Site</a>. We don't use these templates but they're great for a starting design concept. We then ask for 3-5 websites they have found that they like. We then do competitor analysis to find commonality between your competitors.
                   We then recreate the design you picked with many elements of the other websites including your current website so that we have a brand new, completely unique website.
                 </p>
                 <p className="max-w-2xl">

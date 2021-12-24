@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
-
-import { Router } from '@reach/router'
+import Layout from '../components/layout/layout'
+import { Router, Redirect } from '@reach/router'
 import Products from "../storePage/storeComponents/Products"
 import ProductView from "../storePage/storeComponents/Productview"
 import Cart from '../storePage/storeComponents/Cart'
@@ -11,8 +11,10 @@ import { useShopify } from "../storePage/hooks"
 
 import { Provider } from "react-redux"
 
+import "../styles/StorePage/app.css"
 
 import SEO from "../components/layout/seo"
+import styles from '../styles/StorePage/wrapper.css'
 
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"
@@ -102,14 +104,14 @@ const Store = () => {
     const store = createStore(rootReducer, enhancer);
 return (
 
-    <div >
+    <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" />
-
+    <div className={styles.wrapper}>
 	<Provider store={store}>
         <Pages title={pageTitle} getTitle={getTitle} />
 	</Provider>
-
-   </div>
+    </div>
+   </Layout>
 )
 }
 return <Store />

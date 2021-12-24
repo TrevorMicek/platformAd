@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Store', href: '/store' },
 ]
 
 export default function Header(props) {
@@ -24,6 +25,8 @@ export default function Header(props) {
         return ['Tips & Tricks', 'For a Better Website']
       case 'Contact':
         return ['Contact', 'Websites By Trevor']
+      case 'Store':
+        return ['Custom', 'Ecommerce Store']
     }
   }
   return (
@@ -68,17 +71,7 @@ export default function Header(props) {
                 ))}
               </div>
             </div>
-            <div className="hidden md:flex md:items-center md:space-x-6">
-              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
-                Log in
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-              >
-                Start free package
-              </a>
-            </div>
+
           </nav>
         </div>
 
