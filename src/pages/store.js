@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import Layout from '../components/layout/layout'
+import { Link } from 'gatsby'
 import { Router, Redirect } from '@reach/router'
 import Products from "../storePage/storeComponents/Products"
 import ProductView from "../storePage/storeComponents/Productview"
@@ -80,10 +81,10 @@ const App = () => {
 
     return (
         <>
-
         <Router>
-			<Products path="/store" cart={CartWrapper} title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
-			<ProductView path='/store/products/:productId' cart={CartWrapper} title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
+            <CartWrapper path='/store/cart' />
+			<Products path="/store" title={props.title} getTitle={props.getTitle} homeButton={MainHomeButton}  />
+			<ProductView path='/store/products/:productId' title={props.getTitle} homeButton={ContinueShopping} button={getUrl} />
 
         </Router>
         </>

@@ -4,9 +4,10 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-
-import Confirm from './Confirmation'
 import { Link } from "gatsby"
+import Confirm from './Confirmation'
+const Logo = require('../../images/logo.png')
+
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -30,15 +31,15 @@ export default function HeroComp() {
             aria-label="Global"
           >
             <div className="flex items-center flex-1">
-              <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
+              <div className="h-20 w-auto flex items-center justify-between w-full md:w-auto">
+                <a href="/">
                   <span className="sr-only">Workflow</span>
                   <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt=""
-                    width="50px"
-                    height="50px"
+                    className="h-28 w-auto"
+                    src={Logo}
+                    alt="coding logo"
+                    width="200px"
+                    height="200px"
                   />
                 </a>
                 <div className="flex items-center md:hidden">

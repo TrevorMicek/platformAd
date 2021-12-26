@@ -89,7 +89,7 @@ export default (props) => {
 	const downArrow = '^'
 	return (
 		<Layout title={product.title}>
-			{props.cart()}
+
 		<div >
 		<div id="individualProduct">
 

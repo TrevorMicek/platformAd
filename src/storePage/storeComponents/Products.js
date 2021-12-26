@@ -8,7 +8,7 @@ export default (props) => {
 
 	return (
 		<>
-			{props.cart()}
+
 
 				<div >
 

@@ -5,6 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 
 import { Link } from "gatsby"
+const Logo = require('../../images/logo.png')
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -44,13 +45,13 @@ export default function Header(props) {
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="flex items-center flex-1">
+            <div className="h-20 w-auto  flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="/">
                   <span className="sr-only">Workflow</span>
                   <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    className="h-28 w-auto"
+                    src={Logo}
                     alt=""
                     width="50px"
                     height="50px"
@@ -86,11 +87,11 @@ export default function Header(props) {
         >
           <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
             <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div className="px-5 pt-4 flex items-center justify-between">
+              <div className="h-20 w-auto  px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    className="h-28 w-auto"
+                    src={Logo}
                     alt=""
                     width="50px"
                     height="50px"
