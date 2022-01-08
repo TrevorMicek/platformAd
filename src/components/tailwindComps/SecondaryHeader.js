@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 
 import { Link } from "gatsby"
-const Logo = require('../../images/logo.png')
+const Logo = require('../../images/secondaryLogo.png')
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
