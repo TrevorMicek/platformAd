@@ -31,7 +31,7 @@ export default function HeroComp() {
             aria-label="Global"
           >
             <div className="flex items-center flex-1">
-              <div className="h-20 w-auto flex items-center justify-between w-full md:w-auto">
+              <div className="h-16 w-auto flex items-center justify-between w-full md:w-auto">
                 <a href="/">
                   <span className="sr-only">Workflow</span>
                   <img
