@@ -72,8 +72,8 @@ export default function HeroComp() {
         >
           <Popover.Panel focus className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
             <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div className="h-20 w-auto  pt-8 flex items-center justify-between">
-                <div>
+              <div className="h-20 w-auto  pt-4 flex items-center justify-between">
+                <div className="px-0 pt-7">
                   <img
                     className="h-28 w-auto"
                     src={Logo}
@@ -82,7 +82,7 @@ export default function HeroComp() {
                     height="50px"
                   />
                 </div>
-                <div className="-mr-2">
+                <div className="px-4 -mr-2">
                   <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
