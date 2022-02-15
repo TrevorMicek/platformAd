@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CodeIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
 
 const features = [
@@ -20,7 +20,7 @@ const features = [
     name: 'Subscription Pricing',
     description:
       "I personally have created a new & unique pricing model w/ a low setup fee and monthly subscription. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees. We also work with startups to waive upfront costs to help with tight budgets.",
-    icon: ScaleIcon,
+    icon: TagIcon,
   },
   {
     name: 'Wholesale Websites',
