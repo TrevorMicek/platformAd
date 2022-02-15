@@ -5,22 +5,6 @@ import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
 const ecommercePlans = [
   {
-    title: 'Free',
-    featured: false,
-    description: 'All your essential business finances, taken care of.',
-    priceMonthly: 0,
-    priceYearly: 0,
-    pages: 1,
-    mainFeatures: [
-      { id: 1, value: 'Start selling online NOW' },
-      { id: 2, value: 'Fits most business info' },
-      { id: 3, value: 'Link all your assets' },
-      { id: 4, value: 'Partial ecommerce solution' },
-      { id: 5, value: 'Secures sensitive data' },
-      { id: 6, value: 'Buy buttons instead of cart' },
-    ],
-  },
-  {
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
@@ -79,22 +63,6 @@ const ecommercePlans = [
 
 
 const standardPlans = [
-  {
-    title: 'Free',
-    featured: false,
-    description: 'All your essential business finances, taken care of.',
-    priceMonthly: 0,
-    priceYearly: 0,
-    pages: 1,
-    mainFeatures: [
-      { id: 1, value: 'Start your online presence' },
-      { id: 2, value: 'Fits most business info' },
-      { id: 3, value: 'Link all your assets' },
-      { id: 4, value: 'Partial website solution' },
-      { id: 5, value: 'Prioritize important info' },
-      { id: 6, value: 'Centralized business info' },
-    ],
-  },
   {
     title: 'Starter',
     featured: false,
@@ -157,6 +125,10 @@ function classNames(...classes) {
 export default function Pricing() {
   const [confirm, setConfirm] = useState(false)
   const [packages, setPackages] = useState('ecom')
+
+  const sendForm = (e) => {
+    return e.preventDefault
+  }
   const PackageToggle = () => (
     <>
 
@@ -168,7 +140,7 @@ export default function Pricing() {
         aria-hidden="true"
         className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
       />
- {confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
+{confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
       <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
         {ecommercePlans.map((plan) => (
           <div
@@ -361,13 +333,15 @@ export default function Pricing() {
         <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
 
         <div className="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
+        {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-            <span className="block lg:inline">Simple pricing,</span>
+            <span className="block lg:inline">Simple pricing, </span>
             <span className="block lg:inline">all-in-one packages.</span>
           </h1>
           <p className="mt-4 text-xl text-indigo-100">
-            Everything you need, nothing you don't. Pick a plan that best suits your business.
+            Everything you need, nothing you don't. Pick a plan that best suits your business. Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
           </p>
+
         </div>
 
         <h2 className="sr-only">Plans</h2>

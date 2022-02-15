@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useRef, Fragment, useState } from 'react'
 
-import { Fragment, useState } from 'react'
+
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
 
 export default function Example(props) {
   const [open, setOpen] = useState(true)
-    const confirm = () => {
+  const completeButtonRef = useRef(null)
+  const confirm = () => {
         setOpen(false)
-        props.confirm()
+       return  props.confirm()
     }
   return (
     <Transition.Root show={open} as={Fragment}>

@@ -39,7 +39,7 @@ export default function Header(props) {
 
       <div className="relative pb-16 sm:pb-24">
       <Popover as="header" className="border-solid border-indigo-200 border-b">
-        <div className="bg-bg pt-6">
+        <div className="pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
