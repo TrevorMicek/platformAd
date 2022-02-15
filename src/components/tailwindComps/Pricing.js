@@ -327,7 +327,7 @@ export default function Pricing() {
 
 
   return (
-    <div className="bg-gray-50 " style={{gridColumn: 'span 7'}}>
+    <div className="bg-gray-50 " style={{gridRow:"span 9", gridColumn: 'span 7'}}>
       <div className="relative bg-indigo-600">
         {/* Overlapping background */}
         <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
