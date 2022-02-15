@@ -19,7 +19,7 @@ const features = [
   {
     name: 'Subscription Pricing',
     description:
-      "I personally have created a new pricing model that uses a unique subscription w/ very a low setup fee, and low monthly fee. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees. We also work with startups to waive upfront costs to help with tight budgets.",
+      "I personally have created a new & unique pricing model w/ a low setup fee and monthly subscription. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees. We also work with startups to waive upfront costs to help with tight budgets.",
     icon: ScaleIcon,
   },
   {
