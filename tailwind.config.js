@@ -2,7 +2,13 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      
+    extend: {
+        colors: {
+          'default': 'rgb(99 102 241)',
+          'bg': 'rgb(10 20 30)'
+    }
+    },
   },
   variants: {
     extend: {},

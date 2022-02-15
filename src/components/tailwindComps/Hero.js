@@ -25,7 +25,7 @@ export default function HeroComp() {
 
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
       <Popover as="header" className="relative border-solid border-indigo-200 border-b">
-        <div className="bg-gray-900 pt-6">
+        <div className="bg-bg pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
@@ -43,7 +43,7 @@ export default function HeroComp() {
                   />
                 </a>
                 <div className="flex items-center md:hidden">
-                  <Popover.Button className="relative bottom-3 bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                  <Popover.Button className="relative bottom-3 bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
@@ -95,7 +95,7 @@ export default function HeroComp() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
@@ -112,7 +112,7 @@ export default function HeroComp() {
                 <div className="mt-6 px-5">
                   <p className="text-center text-base font-medium text-gray-500">
                     Existing customer?{' '}
-                    <a href="#" className="text-gray-900 hover:underline">
+                    <a href="#" className="text-bg hover:underline">
                       Login
                     </a>
                   </p>
@@ -124,7 +124,7 @@ export default function HeroComp() {
       </Popover>
 
       <main>
-        <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="pt-10 bg-bg sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -133,7 +133,7 @@ export default function HeroComp() {
                     href="#"
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
-                    <Link to={"/product"} className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+                    <Link to={"/product"} className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-default rounded-full">
                       Get a site now
                     </Link>
                     <Link to={"/product"} className="ml-4 text-sm">Visit our product page</Link>
@@ -141,7 +141,7 @@ export default function HeroComp() {
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">Wholesale Custom</span>
-                    <span className="block text-indigo-500">Ecommerce Websites</span>
+                    <span className="block text-default">Ecommerce Websites</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
                   High quality websites for business services. <br /> Start offering customized sites to your clients.
@@ -158,14 +158,14 @@ export default function HeroComp() {
                             id="email"
                             type="email"
                             placeholder="Enter your email"
-                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-bg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-bg"
                           />
                         </div>
                         <div className="mt-3 sm:mt-0 sm:ml-3">
                           <button
                             type="button"
                             onClick={() => setConfirm(true)}
-                            className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                            className="block w-full py-3 px-4 rounded-md shadow bg-default text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-bg"
                           >
                             Start free package
                           </button>

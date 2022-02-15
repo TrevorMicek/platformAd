@@ -30,7 +30,7 @@ export default function Header(props) {
     }
   }
   return (
-    <div className="relative bg-gray-900 overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+    <div className="relative bg-bg overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
       <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
         <div className="relative h-full max-w-7xl mx-auto">
 
@@ -39,7 +39,7 @@ export default function Header(props) {
 
       <div className="relative pb-16 sm:pb-24">
       <Popover as="header" className="border-solid border-indigo-200 border-b">
-        <div className="bg-gray-900 pt-6">
+        <div className="bg-bg pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
@@ -57,7 +57,7 @@ export default function Header(props) {
                   />
                 </a>
                 <div className="flex items-center md:hidden relative bottom-3">
-                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                  <Popover.Button className="bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
@@ -126,7 +126,7 @@ export default function Header(props) {
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}
-              <span className="block text-indigo-400 xl:inline">{props.title ? Title()[1] : ''}</span>
+              <span className="block text-indigo-500 xl:inline">{props.title ? Title()[1] : ''}</span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               {props.text}

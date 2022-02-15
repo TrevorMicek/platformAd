@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Example() {
     return (
-      <div className="bg-indigo-700 -mt-6 -mb-16" style={{gridColumn:"span 7", gridRowStart:"third", gridRowEnd:"fourth"}}>
+      <div className="bg-indigo-600 -mt-6 -mb-16" style={{gridColumn:"span 7", gridRowStart:"third", gridRowEnd:"fourth"}}>
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             <span className="block">Boost conversion rates.</span>
