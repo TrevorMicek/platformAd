@@ -3,6 +3,19 @@ import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 
+/*
+{
+    question: "How do I bring traffic to my site?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+
+  },
+  {
+    question: "What makes Websites By Trevor different?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+*/
 const defaultQ = [
   {
 
@@ -14,12 +27,7 @@ const faqs = [
   answer: "Not everyone needs a website, and not everyone needs a fast website, but if you want to have a solid online presence, social media isn't enough. Our websites allow your business to offer your services or products to your clients. Meaning you can make money directly from your site.",
   open: true
   },
-  {
-    question: "How do I bring traffic to my site?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
 
-  },
   {
     question: "How to make my site faster NOW?",
     answer:
@@ -33,13 +41,9 @@ const faqs = [
   {
     question: "What's the cost of a website?",
     answer:
-      "and coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's run $8,700 for service businesses and $16,000 for ecommerce. This is because we spend 100-200 hours per website and use highly customized and quality web design and optimize every section. To make our sites more affordable, we have created a new pricing model.",
+      "hand coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's run just $2,450 + $175/month for service businesses and $4,500 + $325/month for ecommerce($2,450 + $205/month for the budget tier). This is because we spend 100-200 hours per website and use highly customized and quality web design and optimize every section. To make our sites more affordable, we have created a new pricing model.",
   },
-  {
-    question: "What makes Websites By Trevor different?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
+
 ]
 
 function classNames(...classes) {
