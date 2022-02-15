@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { Switch } from '@headlessui/react'
-
+import emailjs from 'emailjs-com';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
-
+  function onSubmit(data, e) {
+    console.log(data);
+    emailjs.sendForm('service_arikqvn', 'contactform', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+  }
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
       <div className="relative max-w-xl mx-auto" >
@@ -62,7 +65,7 @@ export default function Example() {
           </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="sm:grid-cols-2 sm:gap-x-8">
+          <form action={onSubmit} method="POST" className="sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                 First name
