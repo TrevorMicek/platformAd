@@ -28,7 +28,7 @@ const handleChange = (e) => {
            }
           setEmail(e.target.value)
           break;
-      case 'first-name':
+      case 'name':
           if (validateName !== undefined) {
               setValidateName(undefined)
           }
@@ -78,6 +78,7 @@ const onSubmit = (e) => {
 
       default:
          /* setURL() */
+         setConfirm(true)
          emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
@@ -142,7 +143,7 @@ const onSubmit = (e) => {
           <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
             <div>
 
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">First name</label> <span className="text-red">{validateName}</span>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full name</label> {validateName}
 
               <div className="mt-1">
                 <input
@@ -175,7 +176,7 @@ const onSubmit = (e) => {
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
+                Email {validateEmail}
               </label>
               <div className="mt-1">
                 <input
@@ -223,7 +224,7 @@ const onSubmit = (e) => {
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Message
-              </label>
+              </label> {validateMessage}
               <div className="mt-1">
                 <textarea
                   id="message"
@@ -234,7 +235,7 @@ const onSubmit = (e) => {
                   key='name'
                   placeholder="Enter message..."
                   className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                  defaultValue={''}
+
                 />
               </div>
             </div>
