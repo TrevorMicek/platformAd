@@ -56,14 +56,14 @@ export default function Header(props) {
                     height="50px"
                   />
                 </a>
-                <div className="flex items-center md:hidden relative bottom-3">
+                <div className=" flex items-center md:hidden relative bottom-3">
                   <Popover.Button className="bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
-              <div className="hidden space-x-8 md:flex md:ml-10">
+              <div className="hidden space-x-8 md:flex  md:absolute md:right-10">
                 {navigation.map((item) => (
                   <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}

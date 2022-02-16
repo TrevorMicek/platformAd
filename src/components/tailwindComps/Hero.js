@@ -49,7 +49,7 @@ export default function HeroComp() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="hidden space-x-8 md:flex md:ml-10">
+              <div className="hidden space-x-8 md:flex md:absolute md:right-10">
                 {navigation.map((item) => (
                   <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-gray-300">
                     {item.name}
@@ -109,14 +109,7 @@ export default function HeroComp() {
                     Start free package
                   </a>
                 </div>
-                <div className="mt-6 px-5">
-                  <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{' '}
-                    <a href="#" className="text-bg hover:underline">
-                      Login
-                    </a>
-                  </p>
-                </div>
+
               </div>
             </div>
           </Popover.Panel>
