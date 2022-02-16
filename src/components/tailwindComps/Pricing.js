@@ -333,7 +333,7 @@ export default function Pricing() {
         <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
 
         <div className="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
-        {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
+
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
             <span className="block lg:inline">Simple pricing, </span>
             <span className="block lg:inline">all-in-one packages.</span>
