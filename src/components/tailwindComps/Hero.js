@@ -43,7 +43,7 @@ export default function HeroComp() {
                   />
                 </a>
                 <div className="flex items-center md:hidden">
-                  <Popover.Button className="relative bottom-3 bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                  <Popover.Button className="relative bottom-3 bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-100 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
@@ -83,7 +83,7 @@ export default function HeroComp() {
                   />
                 </div>
                 <div className="px-4 -mr-2">
-                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-indigo-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -95,20 +95,13 @@ export default function HeroComp() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:bg-gray-50"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-bg hover:text-white hover:bg-indigo-500"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <div className="mt-6 px-5">
-                  <a
-                    href="https://buy.stripe.com/14k3cEbdU8SA0SY28d"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
-                  >
-                    Start free package
-                  </a>
-                </div>
+
 
               </div>
             </div>
