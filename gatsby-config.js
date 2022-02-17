@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Custom Ecommerce Websites`,
-    description: `Custom Ecommerce Website`,
+    description: `High Quality Ecommerce Websites By Trevor`,
     author: 'Trevor Micek',
   },
   plugins: [
@@ -16,6 +16,7 @@ module.exports = {
           "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
       },
+        }
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
