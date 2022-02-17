@@ -126,10 +126,10 @@ export default function HeroComp() {
                     href="#"
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
-                    <Link to={"/product"} className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-default rounded-full">
+                    <Link to={"/pricing"} className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-default rounded-full">
                       Get a site now
                     </Link>
-                    <Link to={"/product"} className="ml-4 text-sm">Visit our product page</Link>
+                    <Link to={"/pricing"} className="ml-4 text-sm">Visit our pricing page</Link>
                     <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
@@ -139,10 +139,21 @@ export default function HeroComp() {
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
                   High quality websites for business services. <br /> Start offering customized sites to your clients.
                   </p>
-                  <div className="mt-14 sm:mt-12">
-                    {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
-                   <div className="sm:flex">
-
+                  <div className="mt-10 sm:mt-12">
+                    {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
+                    <form action={sendForm} className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                      <div className="sm:flex">
+                        <div className="min-w-0 flex-1">
+                          <label htmlFor="email" className="sr-only">
+                            Email address
+                          </label>
+                          <input
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-bg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-bg"
+                          />
+                        </div>
                         <div className="mt-3 sm:mt-0 sm:ml-3">
                           <button
                             type="button"
@@ -153,8 +164,15 @@ export default function HeroComp() {
                           </button>
                         </div>
                       </div>
-
-
+                      <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                        Start your free one page website, no credit card necessary. By providing your email, you agree to
+                        our{' '}
+                        <a href="#" className="font-medium text-white">
+                          terms of service
+                        </a>
+                        .
+                      </p>
+                    </form>
                   </div>
                 </div>
               </div>

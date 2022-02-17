@@ -34,7 +34,7 @@ const features = [
 const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection() {
   return (
-    <div className="py-12 pr-4 bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="pb-10 pt-16 -mb-8 -mt-14 pr-4 bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>

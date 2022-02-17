@@ -1,4 +1,4 @@
-import React, {useRef, Fragment, useState } from 'react'
+import React, {useRef, Fragment, useState, useEffect } from 'react'
 
 
 import { Dialog, Transition } from '@headlessui/react'
@@ -8,6 +8,7 @@ export default function Example(props) {
   const [open, setOpen] = useState(true)
   const [prompt, setPrompt] = useState(true)
   const completeButtonRef = useRef(null)
+
   const confirm = () => {
         setOpen(false)
        return  props.confirm()
@@ -48,7 +49,7 @@ export default function Example(props) {
 
 
             {
-              prompt ? <div className=" relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+              prompt && !props.prompt ? <div className=" relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
             <form action={sendForm}  className="mt-12 sm:max-w-xl sm:mx-auto lg:mx-0">
                       <div className="sm:flex">
                         <div className="border-2 mb-8 border-gray-500 min-w-0 flex-1">
