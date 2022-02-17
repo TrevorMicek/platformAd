@@ -3,6 +3,7 @@ import React, {useRef, Fragment, useState, useEffect } from 'react'
 
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
+import emailjs from 'emailjs-com';
 
 export default function Example(props) {
   const [open, setOpen] = useState(true)
@@ -14,7 +15,8 @@ export default function Example(props) {
        return  props.confirm()
     }
     const sendForm = (e) => {
-      return e.preventDefault
+      emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+         e.preventDefault()
     }
   return (
 
@@ -50,7 +52,7 @@ export default function Example(props) {
 
             {
               prompt && !props.prompt ? <div className=" relative bottom-32 inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-            <form action={sendForm}  className="mt-12 sm:max-w-xl sm:mx-auto lg:mx-0">
+            <form className="mt-12 sm:max-w-xl sm:mx-auto lg:mx-0" onSubmit={sendForm}>
                       <div className="sm:flex">
                         <div className="border-2 mb-8 border-gray-500 min-w-0 flex-1">
                           <label htmlFor="email" className="sr-only">

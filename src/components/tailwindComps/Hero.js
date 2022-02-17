@@ -5,6 +5,8 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
+import emailjs from 'emailjs-com';
+
 import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
 
@@ -19,7 +21,8 @@ const navigation = [
 export default function HeroComp() {
   const [confirm, setConfirm] = useState(false)
   const sendForm = (e) => {
-    return e.preventDefault
+    emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+       e.preventDefault()
   }
   return (
 
@@ -134,7 +137,7 @@ export default function HeroComp() {
                   </p>
                   <div className="mt-10 sm:mt-12">
                     {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
-                    <form action={sendForm} className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                    <form className="sm:max-w-xl sm:mx-auto lg:mx-0" onSubmit={sendForm}>
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
                           <label htmlFor="email" className="sr-only">
