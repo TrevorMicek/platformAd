@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -20,9 +20,17 @@ const navigation = [
 
 export default function HeroComp() {
   const [confirm, setConfirm] = useState(false)
-  const sendForm = (e) => {
+  const [email, setEmail] = useState('')
+  const form = useRef()
+  const onSubmit = (e) => {
     emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
        e.preventDefault()
+       console.log('sent')
+  }
+  const handleChange = (e) => {
+
+            setEmail(e.target.value)
+
   }
   return (
 
@@ -137,30 +145,49 @@ export default function HeroComp() {
                   </p>
                   <div className="mt-10 sm:mt-12">
                     {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
-                    <form className="sm:max-w-xl sm:mx-auto lg:mx-0" onSubmit={sendForm}>
-                      <div className="sm:flex">
-                        <div className="min-w-0 flex-1">
-                          <label htmlFor="email" className="sr-only">
-                            Email address
-                          </label>
-                          <input
-                            id="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-bg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-bg"
-                          />
-                        </div>
-                        <div className="mt-3 sm:mt-0 sm:ml-3">
-                          <button
-                            type="button"
-                            onClick={() => setConfirm(true)}
-                            className="block w-full py-3 px-4 rounded-md shadow bg-default text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-bg"
-                          >
-                            Start free package
-                          </button>
-                        </div>
-                      </div>
-                      <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                    <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
+
+
+
+            <div className="sm:col-span-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+
+              </label>
+              <div className="mt-1">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  value={email}
+                  onChange={handleChange}
+                  key='name'
+                  placeholder="Enter email..."
+                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+
+            <div className="sm:col-span-2">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+
+                </div>
+
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <button
+                type="submit"
+                onClick={() => setConfirm(true)}
+                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Start free package
+              </button>
+            </div>
+            <div className="ml-3">
+                <p className="mt-2 text-sm text-gray-300 sm:mt-4">
                         Start your free one page website, no credit card necessary. By providing your email, you agree to
                         our{' '}
                         <a href="#" className="font-medium text-white">
@@ -168,7 +195,8 @@ export default function HeroComp() {
                         </a>
                         .
                       </p>
-                    </form>
+                </div>
+          </form>
                   </div>
                 </div>
               </div>

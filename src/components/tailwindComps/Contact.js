@@ -139,7 +139,7 @@ const onSubmit = (e) => {
           </p>
         </div>
         <div className="mt-12">
-        {confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
+        {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
           <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
             <div>
 
