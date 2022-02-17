@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 
 import { Link } from "gatsby"
-const Logo = require('../../images/logo.png')
+import Logo from '../../images/logo.png'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -57,7 +57,7 @@ export default function Header(props) {
                   />
                 </a>
                 <div className=" flex items-center md:hidden relative bottom-3">
-                  <Popover.Button className="bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                  <Popover.Button className="bg-bg rounded-md p-2 inline-flex items-center justify-center text-gray-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
@@ -97,7 +97,7 @@ export default function Header(props) {
                   />
                 </div>
                 <div className="px-4 pt-4 -mr-2">
-                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                  <Popover.Button className="relative bottom-3 bg-white rounded-md p-2 inline-flex items-center justify-center text-indigo-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -109,7 +109,7 @@ export default function Header(props) {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-100 hover:bg-indigo-500"
                     >
                       {item.name}
                     </a>
