@@ -6,7 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { Link } from "gatsby"
 import Confirm from './Confirmation'
-const Logo = require('../../images/logo.png')
+import Logo from '../../images/logo.png'
 
 const navigation = [
   { name: 'Home', href: '/' },
