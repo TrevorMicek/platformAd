@@ -121,7 +121,7 @@ const standardPlans = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
+const confirmMessage = ['Thanks for choosing Websites By Trevor!', ' We will reach out ASAP to start collaborating on your new free site']
 export default function Pricing() {
   const [confirm, setConfirm] = useState(false)
   const [packages, setPackages] = useState('ecom')
@@ -140,7 +140,7 @@ export default function Pricing() {
         aria-hidden="true"
         className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
       />
-{confirm ? <Confirm confirm={() =>setConfirm(false)} /> : null}
+{confirm ? <Confirm message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
       <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
         {ecommercePlans.map((plan) => (
           <div

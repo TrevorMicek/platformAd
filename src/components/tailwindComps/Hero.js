@@ -32,6 +32,7 @@ export default function HeroComp() {
             setEmail(e.target.value)
 
   }
+  const confirmMessage = ['Thanks for choosing Websites By Trevor!', ' We will reach out ASAP to start collaborating on your new free site']
   return (
 
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
@@ -144,7 +145,7 @@ export default function HeroComp() {
                   High quality websites for business services. <br /> Start offering customized sites to your clients.
                   </p>
                   <div className="mt-10 sm:mt-12">
-                    {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
+                    {confirm ? <Confirm prompt="false" message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
                     <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
 
 

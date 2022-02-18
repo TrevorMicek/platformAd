@@ -79,11 +79,11 @@ const onSubmit = (e) => {
       default:
          /* setURL() */
          setConfirm(true)
-         emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+         //emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
 }
-
+const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We will respond ASAP']
 
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
@@ -139,7 +139,7 @@ const onSubmit = (e) => {
           </p>
         </div>
         <div className="mt-12">
-        {confirm ? <Confirm prompt="false" confirm={() =>setConfirm(false)} /> : null}
+        {confirm ? <Confirm prompt="false" message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
           <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
             <div>
 
