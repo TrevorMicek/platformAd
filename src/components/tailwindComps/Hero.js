@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
-
+import BG from '../../images/techBG.jpg'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -63,7 +63,7 @@ export default function HeroComp() {
               </div>
               <div className="hidden space-x-8 md:flex md:absolute md:right-10">
                 {navigation.map((item) => (
-                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-gray-300">
+                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-indigo-500">
                     {item.name}
                   </Link>
                 ))}
@@ -201,12 +201,12 @@ export default function HeroComp() {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+              <div className="mt-12 pb-28 sm:-mb-48 lg:m-0 lg:relative">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
+                    src={BG}
                     alt=""
                     width="200px"
                     height="100px"

@@ -189,7 +189,7 @@ export default function Pricing() {
                     'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   )}
                 >
-                  {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
+                  {`Buy ${plan.title}` }
                 </a>
 
               </div>
@@ -327,12 +327,12 @@ export default function Pricing() {
 
 
   return (
-    <div className="bg-gray-50 " style={{gridRow:"span 9", gridColumn: 'span 7'}}>
-      <div className="relative bg-indigo-600">
+    <div className="bg-gray-50" style={{gridRow:"span 9", gridColumn: 'span 7'}}>
+      <div className="pb-12 relative bg-indigo-600">
         {/* Overlapping background */}
-        <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block" />
+        <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6" />
 
-        <div className="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className=" relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
 
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
             <span className="block lg:inline">Simple pricing, </span>
