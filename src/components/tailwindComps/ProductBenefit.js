@@ -31,7 +31,7 @@ export default function ProductBenefit() {
         </div>
         </div>
         <div className="mt-12 lg:mt-0 lg:col-span-2">
-          <dl className="flex flex-row space-y-10 sm:space-y-0  sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+          <dl className="-ml-2 flex flex-col justify-between sm:flex-row sm:space-y-0  sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
             <span>{features[0].map((feature, i) => (
               <div key={feature.name} className="relative h-40">
                 <dt>
@@ -43,12 +43,12 @@ export default function ProductBenefit() {
             ))}</span>
             <span>
             {features[1].map((feature) => (
-              <div key={feature.name} className=" relative h-40">
+              <div key={feature.name} className="-ml-2 relative h-40">
                 <dt>
                   <CheckIcon className="absolute h-6 w-6 text-green-500" aria-hidden="true" />
                   <p className="ml-9 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                 </dt>
-                <dd className="mt-2 ml-9 w-56 text-base text-gray-500">{feature.description}</dd>
+                <dd className="mt-2 ml-9 w-52 text-base text-gray-500">{feature.description}</dd>
               </div>
             ))}
             </span>
