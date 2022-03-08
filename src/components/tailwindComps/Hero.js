@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
-import BG from '../../images/techBG.svg'
+import BG from '../../images/techBG2.jpg'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -132,76 +132,36 @@ export default function HeroComp() {
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
                     <Link to={"/pricing"} className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-default rounded-full">
-                      Get a site now
+                      Start Partnership
                     </Link>
-                    <Link to={"/pricing"} className="ml-4 text-sm">Visit our pricing page</Link>
+                    <Link to={"/pricing"} className="ml-4 text-sm">Visit our partners page</Link>
                     <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">Wholesale Custom</span>
+                    <span className="block">Affordable, Custom </span>
                     <span className="block text-default">Ecommerce Websites</span>
                   </h1>
-                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full pr-9">
-                  High quality websites for business services. <br /> Start offering customized sites to your clients.
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl min-w-full ">
+                  High quality websites for services and products. <br /> Attract more customers with a better website.
                   </p>
                   <div className="mt-10 sm:mt-12">
-                    {confirm ? <Confirm prompt="false" message={confirmMessage} confirm={() =>setConfirm(false)} /> : null}
-                    <form ref={form} onSubmit={onSubmit} className="sm:grid-cols-2 sm:gap-x-8">
-
 
 
             <div className="sm:col-span-2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  value={email}
-                  onChange={handleChange}
-                  key='name'
-                  placeholder="Enter email..."
-                  className="py-3 px-4 mb-6 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                />
-              </div>
-            </div>
-
-
-            <div className="sm:col-span-2">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-
-                </div>
-
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <button
+              <Link to="/"
                 type="submit"
                 onClick={() => setConfirm(true)}
                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Start free package
-              </button>
+                Get a site now
+              </Link>
             </div>
-            <div className="ml-3">
-                <p className="mt-2 text-sm text-gray-300 sm:mt-4">
-                        Start your free one page website, no credit card necessary. By providing your email, you agree to
-                        our{' '}
-                        <a href="#" className="font-medium text-white">
-                          terms of service
-                        </a>
-                        .
-                      </p>
-                </div>
-          </form>
+
+
                   </div>
                 </div>
               </div>
-              <div className="mt-12 pb-28 sm:-mb-48 lg:m-0 lg:relative">
+              <div className="mt-12 sm:-mb-48 lg:m-0 lg:relative">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img

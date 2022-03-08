@@ -43,7 +43,7 @@ export default function FeatureSection() {
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
           We are changing how small business web design & development is being done
-          with our custom designed single page applications that we offer at a wholesale discount to business services.
+          with our custom designed single page applications that we offer as an affordable subscription to businesses like you.
           </p>
         </div>
 
