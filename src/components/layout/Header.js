@@ -3,10 +3,12 @@ import React from 'react';
 
 import MainHeader from '../tailwindComps/Hero'
 import SecondaryHeader from '../tailwindComps/SecondaryHeader'
+import PartnerHeader from '../tailwindComps/partner/Hero'
 const Header = (props) => {
 
   const firstTitle = 'Small Business Web Design & Development'
   const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog', 'Store','Contact']
+
 
   const getSecondaryTitle = (curTitle) => {
     for (let i=0;i<secondaryTitles.length;i++) {
@@ -44,6 +46,8 @@ const Header = (props) => {
           return <MainHeader />
         case secondTitle:
           return <SecondaryHeader title={props.title} text={props.text} />
+        case 'partnerships':
+          return <PartnerHeader title={props.title} text={props.text} />
         default:
           return <StoreHeader />
     }
