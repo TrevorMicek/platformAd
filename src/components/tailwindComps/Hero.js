@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
-import BG from '../../images/techBG2.jpg'
+import BG from '../../images/resizeBG.jpg'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
@@ -172,8 +172,9 @@ export default function HeroComp() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src=""
+                    src={BG}
                     alt=""
+                    loading="lazy"
                     width="200px"
                     height="100px"
                   />
