@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'Partnerships', href: '/partnerships' },
+  { name: 'Partnerships', href: 'https://partners.websitesbytrevor.com/' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ]
