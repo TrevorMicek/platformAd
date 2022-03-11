@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 
 import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
-import BG from '../../images/resizeBG.jpg'
+import BG from '../../images/techBG.jpg'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Product', href: '/product' },
