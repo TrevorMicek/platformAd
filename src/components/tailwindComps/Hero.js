@@ -173,8 +173,7 @@ export default function HeroComp() {
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={BG}
-                    alt=""
-                    loading="lazy"
+                    alt="blue technical background image"
                     width="200px"
                     height="100px"
                   />
