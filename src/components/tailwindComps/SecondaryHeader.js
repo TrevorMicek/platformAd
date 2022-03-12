@@ -32,11 +32,7 @@ export default function Header(props) {
   }
   return (
     <div className="relative bg-bg overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
-
-
-      <div className="relative pb-16 sm:pb-24">
-      <Popover as="header" className="">
-      <div className="absolute w-full flex items-center justify-center lg:m-0 ">
+      <div className="absolute -top-6 w-full flex items-center justify-center lg:m-0 ">
                 <div className="mx-auto px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
@@ -48,13 +44,15 @@ export default function Header(props) {
                   />
                 </div>
               </div>
-        <div className="pt-6">
 
+      <div className="relative pb-16 sm:pb-24">
+      <Popover as="header" className="">
+        <div className="pt-6">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="h-20 w-auto flex items-center flex-1">
+            <div className="h-20 w-auto  flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="/">
                   <span className="sr-only">Workflow</span>
@@ -131,13 +129,14 @@ export default function Header(props) {
           </Popover.Panel>
         </Transition>
       </Popover>
-        <main className="pt-16 pb-8 -mb-16 mx-auto  max-w-7xl relative px-4 sm:mt-24">
+
+        <main className="mt-10 -mb-6 mx-auto max-w-7xl px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}
-              <span className="block text-indigo-500 xl:inline">{props.title ? Title()[1] : ''}</span>
+              <span className="block bg-bg text-indigo-500 xl:inline">{props.title ? Title()[1] : ''}</span>
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            <p className="mt-3 max-w-md bg-bg mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               {props.text}
             </p>
 
