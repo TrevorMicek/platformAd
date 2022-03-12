@@ -32,20 +32,29 @@ export default function Header(props) {
   }
   return (
     <div className="relative bg-bg overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
-      <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
-        <div className="relative h-full max-w-7xl mx-auto">
 
-        </div>
-      </div>
 
       <div className="relative pb-16 sm:pb-24">
-      <Popover as="header" className="border-solid border-indigo-200 border-b">
+      <Popover as="header" className="">
+      <div className="absolute w-full flex items-center justify-center lg:m-0 ">
+                <div className="mx-auto px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+                  <img
+                    className="w-full  mx-auto lg:absolute lg:inset-y-0 lg:left-0 lg:h-10/12 lg:w-auto lg:max-w-none"
+                    src="https://res.cloudinary.com/websites-by-trevor/image/upload/v1647045203/techBG_vuer11.webp"
+                    alt="blue technical background image"
+                    width="200px"
+                    height="100px"
+                  />
+                </div>
+              </div>
         <div className="pt-6">
+
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
           >
-            <div className="h-20 w-auto  flex items-center flex-1">
+            <div className="h-20 w-auto flex items-center flex-1">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="/">
                   <span className="sr-only">Workflow</span>
@@ -122,8 +131,7 @@ export default function Header(props) {
           </Popover.Panel>
         </Transition>
       </Popover>
-
-        <main className="mt-16 -mb-6 mx-auto max-w-7xl px-4 sm:mt-24">
+        <main className="pt-16 pb-8 -mb-16 mx-auto  max-w-7xl relative px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}
