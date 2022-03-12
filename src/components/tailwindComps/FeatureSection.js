@@ -21,13 +21,7 @@ const features = [
     description:
       "I personally have created a new & unique pricing model w/ a low setup fee and monthly subscription. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees. We also work with startups to waive upfront costs to help with tight budgets.",
     icon: TagIcon,
-  },
-  {
-    name: 'Wholesale Websites',
-    description:
-      "We work directly with business consultants, SEO specialists, graphic designers, and other business services to bring high quality websites to small businesses. Our wholesale websites are perfect for you and your clients.",
-    icon: TerminalIcon,
-  },
+  }
 ]
 
 
