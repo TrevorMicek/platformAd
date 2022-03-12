@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react'
 import { ChevronDoubleDownIcon } from '@heroicons/react/outline'
-const officeImg = require('../../images/coding7.jpg')
-const metricsImg = require('../../images/metric.png')
+import officeImg from '../../images/coding7.jpg'
+import metricsImg from'../../images/metric.png'
 
 export default function Example() {
   const [learnMore, setLearnMore] = useState(false)
