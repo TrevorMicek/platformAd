@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-
+import { Router } from '@reach/router'
 /* This example requires Tailwind CSS v2.0+ */
 const basicPosts = [
     {
       title: 'Boost your conversion rate',
-      href: '#',
+      href: '/blog/boostconversions',
       category: { name: 'Article', href: '#' },
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
@@ -286,28 +286,28 @@ const basicPosts = [
       <button
         type="button"
         onClick={() => setPost(basicPosts)}
-        className="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+        className={`relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 ${post === basicPosts ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-white hover:bg-gray-50'} text-sm font-medium  focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500`}
       >
         Basics
       </button>
       <button
         type="button"
         onClick={() => setPost(seoPosts)}
-        className="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+        className={`-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300  ${post === seoPosts ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-white hover:bg-gray-50'} text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500`}
       >
         SEO
       </button>
       <button
         type="button"
         onClick={() => setPost(designPosts)}
-        className="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+        className={`-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 ${post === designPosts ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-white hover:bg-gray-50'} text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500`}
       >
         Web Design
       </button>
       <button
         type="button"
         onClick={() => setPost(ecomPosts)}
-        className="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+        className={`-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 ${post === ecomPosts ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-white hover:bg-gray-50'} text-sm font-medium hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500`}
       >
         Ecommerce
       </button>

@@ -22,6 +22,8 @@ export default function Header(props) {
         return ['Personalized websites', 'for your business']
       case 'Pricing':
         return ['Pricing plans for', 'businesses of all sizes']
+      case 'About':
+        return ['Learn more about me', 'and my small business']
       case 'Blog':
         return ['Tips & Tricks', 'For a Better Website']
       case 'Contact':
@@ -73,7 +75,7 @@ export default function Header(props) {
               </div>
               <div className="hidden space-x-8 md:flex  md:absolute md:right-10">
                 {navigation.map((item) => (
-                  <Link to={item.href} key={item.name} className="text-base font-medium text-white hover:text-gray-300">
+                  <Link to={item.href} key={item.name} className="text-base bg-bg bg-opacity-70 font-medium text-white hover:text-gray-300">
                     {item.name}
                   </Link>
                 ))}
@@ -136,7 +138,7 @@ export default function Header(props) {
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}
               <span className="block mx-auto w-max bg-bg text-indigo-500 xl:inline">{props.title ? Title()[1] : ''}</span>
             </h1>
-            <p className="mt-3 max-w-sm bg-bg mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            <p className="mt-3 max-w-sm bg-bg mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl ">
               {props.text}
             </p>
 

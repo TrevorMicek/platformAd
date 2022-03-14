@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "What's the cost of a website?",
     answer:
-      "hand coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's run just $2,450 + $175/month for service businesses and $4,500 + $325/month for ecommerce($2,450 + $205/month for the budget tier). This is because we spend 100-200 hours per website and use highly customized and quality web design and optimize every section. To make our sites more affordable, we have created a new pricing model.",
+      "hand coded website's are minimum $3,000 for a basic site, for a not so good site you can get one for under a thousand but that's only suggested if you're on a tight budget and I would personally suggest waiting till you can afford a good website. Our website's start at $140/month for service businesses and $255/month for ecommerce.",
   },
 
 ]
@@ -52,8 +52,8 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="bg-gray-50" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
-      <div className="max-w-7xl mx-auto pb-8 px-4 sm:py-16 sm:px-6 lg:px-8">
+    <div className="bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
+      <div className="max-w-7xl mx-auto bg-indigo-50  -mt-12 pt-12 pb-8 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently asked questions</h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">

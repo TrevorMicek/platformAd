@@ -17,17 +17,16 @@ const features = [
 
 export default function ProductBenefit() {
   return (
-    <div className="bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+    <div className="bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+      <div className="max-w-7xl bg-indigo-50 mx-auto -mt-20 pt-20 py-8 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div>
           <h2 className="text-base font-semibold text-indigo-600 uppercase tracking-wide">Everything you need</h2>
-          <p className="mt-2 max-w-2xl text-3xl font-extrabold text-gray-900 mr-8">Perfect for online stores</p>
-          <div className="mt-4 text-lg text-gray-500">
-          <p className="-mb-2">Speed: 2x-4x Faster Than WordPress</p><br />
+          <p className="mt-2 w-10/12 text-3xl font-extrabold text-gray-900 mr-8">Perfect for products or services</p>
+          <div className="mt-4 text-lg text-gray-600">
+          <p className="-mb-2">Speed: 2x-4x faster than page builders, leading to more traffic and conversions</p><br />
 
-<p className="text-gray-900 -mb-2">Cost: 25% upfront & a low monthly subscription;  our prices can't be beat by other custom developers</p><br />
+          <p className=" -mb-2">Cost: A simple monthly subscription for a fraction of the cost of other developers</p><br />
 
-<p>Growth: Quality Websites Lead To More Organic Growth</p>
         </div>
         </div>
         <div className="mt-12 lg:mt-0 lg:col-span-2">

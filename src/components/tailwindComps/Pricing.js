@@ -3,13 +3,15 @@ import React, { useState } from 'react'
 import Confirm from './Confirmation'
 import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
+//Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
 const ecommercePlans = [
   {
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
-    priceMonthly: 900,
-    priceYearly: 90,
+    priceMonthly: 120,
+    priceYearly: '1,199',
+    savings: 240,
     pages: 2,
     link: 'https://buy.stripe.com/6oE7sUchY4Ck45a144',
     mainFeatures: [
@@ -22,23 +24,24 @@ const ecommercePlans = [
     ],
   },
   {
-    title: 'Full Solution',
+    title: 'Standard',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 4500,
-    priceYearly: 325,
-    pages: 6,
+    priceMonthly: 330,
+    priceYearly: '3,299',
+    savings: 660,
+    pages: 5,
     link: 'https://buy.stripe.com/bIY28A2Hoc4MatyfYZ',
     mainFeatures: [
       { id: 1, value: 'Revenue directly from site' },
       { id: 2, value: 'Better leads & conversions' },
-      { id: 3, value: 'Fits all business info' },
-      { id: 4, value: 'Link all your assets' },
-      { id: 5, value: 'Full ecommerce solution' },
+      { id: 3, value: 'Inventory management included' },
+      { id: 4, value: 'Full ecommerce solution' },
+      { id: 5, value: 'Easily scalable' },
       { id: 6, value: 'Better user experience' },
       { id: 7, value: 'Secures sensitive data' },
-      { id: 8, value: 'Easily scalable' },
-      { id: 9, value: 'Inventory management included' },
+      { id: 8, value: 'Link all your assets' },
+      { id: 9, value: 'Fits all business info' },
       { id: 10, value: 'Cart & checkout pages' },
     ],
   },
@@ -46,9 +49,10 @@ const ecommercePlans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 2450,
-    priceYearly: 205,
-    pages: 6,
+    priceMonthly: 255,
+    priceYearly: '2,549',
+    savings: 510,
+    pages: 5,
     link: 'https://buy.stripe.com/aEUeVmchY5GoeJO5km',
     mainFeatures: [
       { id: 1, value: 'Start selling online NOW' },
@@ -67,8 +71,9 @@ const standardPlans = [
     title: 'Starter',
     featured: false,
     description: 'All your essential business finances, taken care of.',
-    priceMonthly: 615,
-    priceYearly: 45,
+    priceMonthly: 80,
+    priceYearly: '799',
+    savings: 160,
     pages: 1,
     link: 'https://buy.stripe.com/14kcNe95Mgl259eaEH',
     mainFeatures: [
@@ -81,12 +86,13 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Full Solution',
+    title: 'Standard',
     featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 2450,
-    priceYearly: 175,
-    pages: 5,
+    priceMonthly: 189,
+    priceYearly: '1,889',
+    savings: 378,
+    pages: 4,
     link: 'https://buy.stripe.com/28odRigyefgYbxC5ko',
     mainFeatures: [
       { id: 1, value: 'Better leads & conversions' },
@@ -102,10 +108,11 @@ const standardPlans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 1700,
-    priceYearly: 175,
+    priceMonthly: 140,
+    priceYearly: '1,399',
+    savings: 280,
     link: 'https://buy.stripe.com/28odRigyefgYbxC5ko',
-    pages: 5,
+    pages: 3,
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
       { id: 2, value: 'Full website solution'},
@@ -164,21 +171,21 @@ export default function Pricing() {
                   <p
                     className={classNames(
                       plan.featured ? 'text-indigo-600' : 'text-white',
-                      'text-4xl font-extrabold tracking-tight'
+                      'text-4xl mb-20 font-extrabold tracking-tight'
                     )}
                   >
                     ${plan.priceMonthly}
                   </p>
                   <div className="ml-4">
                     <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                      +  {plan.priceYearly} / mo
+                    / month or <br /> ${plan.priceYearly} / year (save ${plan.savings})
                     </p>
                     <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                       Yearly Contracts
                     </p>
                   </div>
                 </div>
-
+                    <div className=' mx-auto flex flex-row space-x-2'>
                 <a
                   href={plan.link ? plan.link : null}
                   onClick={!plan.link ? () => setConfirm(true) : null}
@@ -186,12 +193,24 @@ export default function Pricing() {
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                       : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   )}
                 >
-                  {`Buy ${plan.title}` }
+                  Subscribe
                 </a>
-
+                <a
+                  href={plan.link ? plan.link : null}
+                  onClick={!plan.link ? () => setConfirm(true) : null}
+                  className={classNames(
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                  )}
+                >
+                  Buy Yearly
+                </a>
+                  </div>
               </div>
             </div>
             <h4 className="sr-only">Features</h4>
@@ -259,32 +278,46 @@ export default function Pricing() {
             <p
               className={classNames(
                 plan.featured ? 'text-indigo-600' : 'text-white',
-                'text-4xl font-extrabold tracking-tight'
+                'text-4xl mb-20 font-extrabold tracking-tight'
               )}
             >
               ${plan.priceMonthly}
             </p>
             <div className="ml-4">
               <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                +  {plan.priceYearly} / mo
+              / month or <br /> ${plan.priceYearly} / year (save ${plan.savings})
               </p>
               <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                 Yearly Contracts
               </p>
             </div>
           </div>
-          <a
-            href={plan.link ? plan.link : null}
-            onClick={!plan.link ? () => setConfirm(true) : null}
-            className={classNames(
-              plan.featured
-                ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                : 'bg-white text-indigo-600 hover:bg-indigo-50',
-              'mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
-            )}
-          >
-            {plan.title === 'Free' ? `Get ${plan.title} Package`: `Buy ${plan.title}` }
-          </a>
+          <div className=' mx-auto flex flex-row space-x-2'>
+                <a
+                  href={plan.link ? plan.link : null}
+                  onClick={!plan.link ? () => setConfirm(true) : null}
+                  className={classNames(
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                  )}
+                >
+                  Subscribe
+                </a>
+                <a
+                  href={plan.link ? plan.link : null}
+                  onClick={!plan.link ? () => setConfirm(true) : null}
+                  className={classNames(
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                  )}
+                >
+                  Buy Yearly
+                </a>
+                  </div>
         </div>
       </div>
       <h4 className="sr-only">Features</h4>
@@ -339,7 +372,7 @@ export default function Pricing() {
             <span className="block lg:inline">all-in-one packages.</span>
           </h1>
           <p className="mt-4 text-xl text-indigo-100">
-            Everything you need, nothing you don't. Pick a plan that best suits your business. Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
+            Everything you need, nothing you don't. Pick a plan that best suits your business.
           </p>
 
         </div>
@@ -359,7 +392,7 @@ export default function Pricing() {
             <button
               type="button"
               onClick={() => setPackages('standard')}
-              className={`${packages === 'standard' ? 'relative bg-white py-2 px-6 border-indigo-700 rounded-md shadow-sm text-sm font-medium text-indigo-700 whitespace-nowrap hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10' : 'ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium text-indigo-200 whitespace-nowrap hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10'}`}
+              className={`${packages === 'standard' ? 'relative w-36 bg-white py-2 px-6 border-indigo-700 rounded-md shadow-sm text-sm font-medium text-indigo-700 whitespace-nowrap hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10' : 'ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium text-indigo-200 whitespace-nowrap hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10'}`}
             >
               Standard
             </button>

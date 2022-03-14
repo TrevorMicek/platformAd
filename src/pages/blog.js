@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Router } from "@reach/router"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
@@ -43,8 +44,11 @@ const IndexPage = () => {
   <Layout title="Blog" text="Learn About Web Design, SEO, Ecommerce & More!">
     <SEO title="Blog" />
 
-      <BlogSection />
 
+      <Router>
+        <BlogSection path="/blog" />
+        <div path="/blog/:id" >blog article</div>
+      </Router>
   </Layout>
   )
   }

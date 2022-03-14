@@ -7,19 +7,19 @@ const features = [
   {
     name: '100% Hand Coded',
     description:
-    "All of our sites are made from scratch using our own custom code. This allows us full control over the design and functionality for your clients. Meaning our sites are higher quality and always faster to load. Custom or page built sites can't compete with our quality.",
+    "All of our sites are made from scratch using our own code. This allows us full control over the design and functionality, leading to more traffic and conversions.",
     icon: CodeIcon,
   },
   {
     name: 'Optimization',
     description:
-      "Optimization & speed is our driving force for a high quality site. The number one reason visitors will leave your website is if it's too slow, or not user-friendly. But optimization also includes making every site accessible and SEO friendly to rank higher on Google.",
+      "The #1 reason visitors will leave a website is if it's slow to load. Our sites are lightning fast, accessible and SEO friendly to rank higher on Google and provide a better user experience.",
     icon: LightningBoltIcon,
   },
   {
     name: 'Subscription Pricing',
     description:
-      "I personally have created a new & unique pricing model w/ a low setup fee and monthly subscription. This way, you enjoy affordable packages, no huge upfront costs, simple contracts, & no hidden fees. We also work with startups to waive upfront costs to help with tight budgets.",
+      "We use a unique subscription pricing model, so you enjoy no upfront costs, affordable packages and no hidden fees.",
     icon: TagIcon,
   }
 ]
@@ -28,7 +28,7 @@ const features = [
 const metricsImg = require('../../images/metrics.png')
 export default function FeatureSection() {
   return (
-    <div className="pb-10 pt-16 -mb-8 -mt-14 pr-4 bg-white" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>
@@ -36,8 +36,8 @@ export default function FeatureSection() {
           A New Way of Making Websites
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-          We are changing how small business web design & development is being done
-          with our custom designed single page applications that we offer as an affordable subscription to businesses like you.
+          We are changing how small business web design and development is being done
+          with our hand coded websites that we offer as an affordable subscription to businesses like you.
           </p>
         </div>
 

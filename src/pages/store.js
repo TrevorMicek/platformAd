@@ -106,7 +106,7 @@ return (
 
     <Layout title="Store" text="Our high quality, unique store example that's perfect for small businesses">
     <SEO title="Online Store" />
-    <div className={styles.wrapper}>
+    <div>
 	<Provider store={store}>
         <Pages title={pageTitle} getTitle={getTitle} />
 	</Provider>
