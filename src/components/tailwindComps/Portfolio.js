@@ -1,26 +1,36 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import eaglePlumeDesktop from '../../images/eaglePlumes.webp'
+import eagleMobile from '../../images/eagleMobile.webp'
+import spotterDesktop from '../../images/spotter.webp'
+import spotterMobile from '../../images/spotterMobile.webp'
+import marketDesktop from '../../images/market.webp'
+import marketMobile from '../../images/marketMobile.webp'
+
 const portfolio = [
     {
       name: "Eagle Plume's",
       description:
       "A little piece of history in the high mountains of Colorado, this 100 year old business is now getting more sales online then ever before.",
-      img: null,
+      desktop: eaglePlumeDesktop,
+      mobile: eagleMobile,
       link: 'https://www.eagle-plumes.com/'
     },
     {
       name: 'Spotter Fitness',
       description:
         "This fitness app is transforming the way people work out. With their new website, they're able to funnel more customers directly to their app.",
-      img: null,
+      desktop: spotterDesktop,
+      mobile: spotterMobile,
       link: 'https://spotterfitness.com/'
     },
     {
       name: 'Competitive Intelligence & Analytics',
       description:
         "This Colorado marketer is now able to  offer services directly through their website, increasing their reach and sales.",
-      img: null,
+      desktop: marketDesktop,
+      mobile: marketMobile,
       link: 'https://www.getmarketintel.com/'
     }
   ]
@@ -46,11 +56,11 @@ export default function Example() {
                     {example.description}
                   </p>
 
-                <div className=" flex flex-col justify-between   sm:flex-row lg:inset-y-0 lg:right-0 lg:h-full">
+                <div className="mt-10 flex flex-col md:flex-row md:space-y-10 lg:inset-y-0 lg:right-0 lg:h-full">
                   <Link to={example.link}>
                       <img
-                    className="inset-0 w-8/12 h-60  object-fit rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                    src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+                    className="inset-0 w-5/12 h-60 object-fit rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 sm:w-3/12 md:w-11/12"
+                    src={example.mobile}
                     alt=""
                     width="300px"
                     height="200px"
@@ -58,8 +68,8 @@ export default function Example() {
                   </Link>
                   <Link to={example.link}>
                   <img
-                    className="inset-0 w-full h-full object-cover rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                    src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+                    className="inset-0 relative w-full h-80 object-fit rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 md:w-9/12 md:left-24"
+                    src={example.desktop}
                     alt=""
                     width="300px"
                     height="200px"
