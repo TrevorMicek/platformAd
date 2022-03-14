@@ -64,6 +64,7 @@ export default function Example() {
                     alt=""
                     width="300px"
                     height="200px"
+                    loading="lazy"
                   />
                   </Link>
                   <Link to={example.link}>
@@ -73,6 +74,7 @@ export default function Example() {
                     alt=""
                     width="300px"
                     height="200px"
+                    loading="lazy"
                   />
                   </Link>
                 </div>
