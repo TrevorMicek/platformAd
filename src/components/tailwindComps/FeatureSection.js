@@ -9,32 +9,20 @@ const features = [
   },
   {
     name: 'Higher conversions',
-    description: 'No more slow websites that turn away customers. Get more conversions more easily with our lightning fast load times.',
+    description: 'No more slow websites that turn away customers. Get more conversions more easily with our lightning fast load times that are perfect for products or services.',
   },
   {
     name: 'Beautiful components',
-    description: 'Get instant access to dozens of custom, pre-built components and sections to easily create a site that fits with your branding.',
-  },
-  {
-    name: 'Mobile friendly',
-    description: 'Every website and all of our components are meticuliously created to look great on every screen, big and small.',
+    description: 'Get instant access to dozens of custom & mobile-friendly, pre-built  components and sections to easily create a site with excellent user experience that fits with your branding',
   },
   {
     name: 'Quality customer support',
     description: "With us, you can always get on the phone or chat with a real person that will have real solutions.",
   },
   {
-    name: 'Services or products',
-    description: 'Easily build a service website or a full ecommerce site.',
-  },
-  {
-    name: '',
-    description: 'Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.',
-  },
-  {
-    name: 'Mobile app',
-    description: 'Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.',
-  },
+    name: 'More traffic',
+    description: 'Our sites get more traffic, leading to more conversions than other page builders because of the quality of our design & development.',
+  }
 ]
 
 export default function Example() {

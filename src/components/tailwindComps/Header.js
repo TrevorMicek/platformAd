@@ -35,6 +35,15 @@ export default function Example() {
                   Introducing: <span className="text-blue">Eclipse Builder</span> - no code, beautiful components and faster page load times. 0 tech skills needed.
                 </p>
               </div>
+              <div className=" rounded-md shadow">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange hover:bg-blue"
+              >
+                Join our beta
+              </a>
+              <div className="mt-4">* all participants get a free website</div>
+            </div>
             </div>
           </div>
         </div>
