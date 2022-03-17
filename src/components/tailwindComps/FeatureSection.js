@@ -5,30 +5,30 @@ import { CheckIcon } from '@heroicons/react/outline'
 const features = [
   {
     name: 'No code page building',
-    description: 'The foundation of any platform is a no code builder, but ours is a little bit different.',
+    description: "The foundation of any platform is a no code builder, but ours is a little bit different because we don't have huge confusing menus.",
   },
   {
-    name: 'Lightning fast loading time',
-    description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
+    name: 'Higher conversions',
+    description: 'No more slow websites that turn away customers. Get more conversions more easily with our lightning fast load times.',
+  },
+  {
+    name: 'Beautiful components',
+    description: 'Get instant access to dozens of custom, pre-built components and sections to easily create a site that fits with your branding.',
+  },
+  {
+    name: 'Mobile friendly',
+    description: 'Every website and all of our components are meticuliously created to look great on every screen, big and small.',
+  },
+  {
+    name: 'Quality customer support',
+    description: "With us, you can always get on the phone or chat with a real person that will have real solutions.",
+  },
+  {
+    name: 'Services or products',
+    description: 'Easily build a service website or a full ecommerce site.',
   },
   {
     name: '',
-    description: 'Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis. Dictum lacus.',
-  },
-  {
-    name: 'Boards',
-    description: 'Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.',
-  },
-  {
-    name: 'Keyboard shortcuts',
-    description: 'Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.',
-  },
-  {
-    name: 'Reporting',
-    description: 'Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.',
-  },
-  {
-    name: 'Calendars',
     description: 'Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.',
   },
   {
@@ -39,11 +39,12 @@ const features = [
 
 export default function Example() {
   return (
-    <div className="relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="relative overflow-hidden -mt-16" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900">A new kind of platform</h2>
+          <h2 className="text-3xl font-extrabold text-blue">A better page builder</h2>
           <p className="mt-4 text-lg text-gray-500">
             Other platforms are a great starting point, but when you outgrow them, your options are limited. We are aiming to be the next step.
           </p>
@@ -52,10 +53,10 @@ export default function Example() {
           {features.map((feature) => (
             <div key={feature.name} className="relative">
               <dt>
-                <CheckIcon className="absolute h-6 w-6 text-green-500" aria-hidden="true" />
-                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+                <CheckIcon className="absolute h-6 w-6 text-orange" aria-hidden="true" />
+                <p className="ml-9 text-lg leading-6 font-medium text-blue">{feature.name}</p>
               </dt>
-              <dd className="mt-2 ml-9 text-base text-gray-500">{feature.description}</dd>
+              <dd className="mt-2 ml-9 text-base text-gray-600">{feature.description}</dd>
             </div>
           ))}
         </dl>

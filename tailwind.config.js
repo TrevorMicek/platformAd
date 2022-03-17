@@ -6,8 +6,13 @@ module.exports = {
     extend: {
         colors: {
           'default': 'rgb(99 102 241)',
-          'bg': 'rgb(10 20 30)'
-    }
+          'bg': 'rgb(10 20 30)',
+          'orange': 'rgb(194 65 12)',
+          'blue': 'rgb(15 118 110)'
+        },
+        backgroundImage: {
+            'eclipse': 'url(../images/eclipseResize.jpg)'
+        }
     },
   },
   variants: {

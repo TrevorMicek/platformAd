@@ -45,6 +45,7 @@ const Layout = ({children, title, text, pageLayout}) => {
       >
 
        <div class="grid">
+
         <Header title={title} text={text} />
 
 
