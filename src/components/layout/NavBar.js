@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet"
 
 
 import './navBarStyles.css';
-const hamburger = require('../../images/HamburgerImg.svg')
-const xImg = require('../../images/X.svg')
-const logo = require('../../images/logo.svg')
+const hamburger = 'hamburger'
+const xImg = 'x'
+const logo = 'logo'
 const Nav = (props) => {
 
   const [isOpen, setIsOpen] = useState(false)

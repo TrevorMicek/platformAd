@@ -1,62 +1,66 @@
 import React from 'react'
 
-import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
-
+import { CheckIcon } from '@heroicons/react/outline'
 
 const features = [
   {
-    name: '100% Hand Coded',
-    description:
-    "All of our sites are made from scratch using our own code. This allows us full control over the design and functionality, leading to more traffic and conversions.",
-    icon: CodeIcon,
+    name: 'No code page building',
+    description: 'The foundation of any platform is a no code builder, but ours is a little bit different.',
   },
   {
-    name: 'Optimization',
-    description:
-      "The #1 reason visitors will leave a website is if it's slow to load. Our sites are lightning fast, accessible and SEO friendly to rank higher on Google and provide a better user experience.",
-    icon: LightningBoltIcon,
+    name: 'Lightning fast loading time',
+    description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
   },
   {
-    name: 'Subscription Pricing',
-    description:
-      "We use a unique subscription pricing model, so you enjoy no upfront costs, affordable packages and no hidden fees.",
-    icon: TagIcon,
-  }
+    name: '',
+    description: 'Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis. Dictum lacus.',
+  },
+  {
+    name: 'Boards',
+    description: 'Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.',
+  },
+  {
+    name: 'Keyboard shortcuts',
+    description: 'Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.',
+  },
+  {
+    name: 'Reporting',
+    description: 'Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.',
+  },
+  {
+    name: 'Calendars',
+    description: 'Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.',
+  },
+  {
+    name: 'Mobile app',
+    description: 'Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.',
+  },
 ]
 
-
-const metricsImg = require('../../images/metrics.png')
-export default function FeatureSection() {
+export default function Example() {
   return (
-    <div className="pb-10 pt-16 -mb-8 -mt-20 pr-4 bg-indigo-50" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-default font-semibold tracking-wide uppercase">Affordable and coded by hand</h2>
-          <p className="mt-2 max-w-3xl text-3xl leading-8 font-extrabold tracking-tight text-gray-900 lg:mx-auto">
-          A New Way of Making Websites
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-          We are changing how small business web design and development is being done
-          with our hand coded websites that we offer as an affordable subscription to businesses like you.
+    <div className="relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="bg-white">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900">A new kind of platform</h2>
+          <p className="mt-4 text-lg text-gray-500">
+            Other platforms are a great starting point, but when you outgrow them, your options are limited. We are aiming to be the next step.
           </p>
         </div>
-
-        <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative">
-                <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
-                </dt>
-                <dd className="mt-2 ml-16 text-base text-gray-600">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+        <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+          {features.map((feature) => (
+            <div key={feature.name} className="relative">
+              <dt>
+                <CheckIcon className="absolute h-6 w-6 text-green-500" aria-hidden="true" />
+                <p className="ml-9 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+              </dt>
+              <dd className="mt-2 ml-9 text-base text-gray-500">{feature.description}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
+    </div>
     </div>
   )
 }
