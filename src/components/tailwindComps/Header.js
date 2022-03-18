@@ -2,9 +2,19 @@ import React, { useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
 import '../layout/gradient.css'
-import Mesh from '../commonComps/Mesh'
-export default function Example() {
 
+import { Gradient } from '../commonComps/Gradient'
+
+// Create your instance
+const gradient = new Gradient()
+
+// Call `initGradient` with the selector to your canvas
+
+
+export default function Example() {
+  useEffect(() => {
+    gradient.initGradient('#gradient-canvas')
+  }, [])
   return (
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
 
@@ -20,8 +30,9 @@ export default function Example() {
               />
             </div>
             <div className="mt-0">
-            <Mesh />
 
+              <canvas  id="gradient-canvas" data-transition-in>
+              </canvas>
               <div>
                 <a href="#" className="inline-flex space-x-4">
                   <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-orange tracking-wide uppercase">
