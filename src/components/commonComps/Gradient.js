@@ -165,5 +165,5 @@ class BasicCube {
 }
 
 
-const scene = new BasicCube(document.querySelector('#app'));
+const scene = new BasicCube(document && document.querySelector('#app'));
 export default scene
