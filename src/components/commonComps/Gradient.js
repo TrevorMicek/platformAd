@@ -99,7 +99,7 @@ class BasicCube {
     });
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.container.appendChild(this.renderer.domElement);
+    this.container && this.container.appendChild(this.renderer.domElement);
 
     window.addEventListener('resize', this.onResize.bind(this));
 
@@ -165,5 +165,5 @@ class BasicCube {
 }
 
 
-const scene = new BasicCube(document === 'undefined' ? undefined : document.querySelector('#app'));
-export default scene
+
+export default BasicCube

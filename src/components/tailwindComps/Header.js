@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
-import '../commonComps/Gradient'
+import Gradient from '../commonComps/Gradient'
 export default function Example() {
-
+ useEffect(() => {
+  new Gradient(document === 'undefined' ? undefined : document.querySelector('#app'));
+ }, [])
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
 
@@ -21,6 +23,7 @@ export default function Example() {
             <div className="mt-0">
 
             <div id="app"></div>
+
               <div>
                 <a href="#" className="inline-flex space-x-4">
                   <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-orange tracking-wide uppercase">
