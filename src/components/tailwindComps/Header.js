@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
+import '../layout/gradient.css'
+import Mesh from '../commonComps/Mesh'
 export default function Example() {
+
   return (
     <div className="relative overflow-hidden" style={{gridColumn:"span 5", gridRowStart:"header", gridRowEnd:"main"}}>
+
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -16,6 +20,8 @@ export default function Example() {
               />
             </div>
             <div className="mt-0">
+            <Mesh />
+
               <div>
                 <a href="#" className="inline-flex space-x-4">
                   <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-orange tracking-wide uppercase">
