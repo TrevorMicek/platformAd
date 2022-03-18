@@ -1,16 +1,12 @@
 import React, { useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
-import '../layout/gradient.css'
-import mesh from '../commonComps/Mesh'
+import '../commonComps/Gradient'
 export default function Example() {
-  useEffect(() => {
-    mesh()
-  }, [])
+
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-      <canvas className="absolute z-0" width="300" height="500" id="gradient-canvas" data-transition-in>
-              </canvas>
+
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
         <div className="relative z-30 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -24,7 +20,7 @@ export default function Example() {
             </div>
             <div className="mt-0">
 
-
+            <div id="app"></div>
               <div>
                 <a href="#" className="inline-flex space-x-4">
                   <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-orange tracking-wide uppercase">
