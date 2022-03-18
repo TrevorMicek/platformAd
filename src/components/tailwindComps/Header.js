@@ -36,14 +36,14 @@ export default function Example() {
                 </a>
               </div>
               <div className="mt-6 sm:max-w-xl">
-                <h1 className="text-4xl font-extrabold text-black tracking-tight sm:text-5xl">
+                <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
                   Eclipse Builder
                 </h1>
                 <p className="mt-6 text-xl text-gray-200">
-                  Introducing: <span className="text-black">Eclipse Builder</span> - no code, beautiful components and faster page load times. 0 tech skills needed.
+                  Introducing: <span className="text-white">Eclipse Builder</span> - no code, beautiful components and faster page load times. 0 tech skills needed.
                 </p>
               </div>
-              <div className=" rounded-md shadow">
+              <div>
               <a
                 href="#"
                 className="relative top-10 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange hover:bg-blue"
