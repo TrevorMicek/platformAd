@@ -70,8 +70,8 @@ const snoiseFunction = () => ` vec3 mod289(vec3 x) { return x - floor(x * (1.0 /
 
         void main() {
             vec3 bg = rgb(u_bg.r, u_bg.g, u_bg.b);
-            vec3 c1 = rgb(u_color1.r, u_color1.g, u_color1.b);
-            vec3 c2 = rgb(u_color2.r, u_color2.g, u_color2.b);
+            vec3 c1 = rgb(10, 20, 30);
+            vec3 c2 = rgb(194, 65, 12);
             vec3 bgMain = rgb(u_bgMain.r, u_bgMain.g, u_bgMain.b);
 
             float noise1 = snoise(vUv + u_time * 0.08);

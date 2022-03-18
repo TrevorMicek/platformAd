@@ -117,7 +117,7 @@ class BasicCube {
       u_mouse: { type: 'v2', value: new THREE.Vector2() },
       tex1: {
         type: 't',
-        value: new THREE.TextureLoader().load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/200360/gradient-test.jpg'),
+        value: new THREE.TextureLoader().load('https://images.unsplash.com/photo-1620121684840-edffcfc4b878?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9yYW5nZSUyMGFuZCUyMGJsYWNrJTIwZ3JhZGllbnQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),
 
       },
     };
@@ -148,7 +148,7 @@ class BasicCube {
   }
 
   animate() {
-    this.uniforms.u_time.value += 0.01;
+    this.uniforms.u_time.value += 0.001;
 
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(() => this.animate());

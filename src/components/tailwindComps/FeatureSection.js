@@ -27,8 +27,9 @@ const features = [
 
 export default function Example() {
   return (
-    <div className="relative overflow-hidden -mt-64" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
-      <div className="bg-white absolute z-20 top-20  h-52 w-full border-2" style={{transform: 'skewY(9deg)'}} />
+    <div className="relative overflow-hidden -mt-72" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
+
+      <div className="bg-white absolute z-20 top-20  h-64 w-full " style={{transform: 'skewY(9deg)'}} />
     <div className="bg-transparent relative z-30 mt-36">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
