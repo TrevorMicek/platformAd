@@ -8,7 +8,7 @@ export default function Example() {
  }, [])
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-<div className="absolute -top-20 z-0 transform scale-x-150"  id="app"></div>
+<div className="absolute -top-12 z-0 transform scale-x-150"  id="app"></div>
 
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
