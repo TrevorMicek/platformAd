@@ -29,7 +29,7 @@ export default function Example() {
                   <span className="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-orange tracking-wide uppercase">
                     Notify me
                   </span>
-                  <span className="inline-flex items-center text-sm font-medium text-black space-x-1">
+                  <span className="inline-flex items-center text-sm font-medium text-white space-x-1">
                     <span>Coming early 2023</span>
                     <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
                   </span>
