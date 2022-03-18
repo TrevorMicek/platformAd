@@ -490,7 +490,7 @@ function normalizeColor(hexCode) {
     * Initializes the four section colors by retrieving them from css variables.
     */
     initGradientColors() {
-        this.sectionColors = ["--gradient-color-1", "--gradient-color-2", "--gradient-color-3", "--gradient-color-4"].map(cssPropertyName => {
+        this.sectionColors = ["--gradient-color-1", "--gradient-color-2", "--gradient-color-3", "--gradient-color-4", "--gradient-color-5", "--gradient-color-6", "--gradient-color-7", "--gradient-color-8"].map(cssPropertyName => {
             let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
             //Check if shorthand hex value was used and double the length so the conversion in normalizeColor will work.
             if (4 === hex.length) {
