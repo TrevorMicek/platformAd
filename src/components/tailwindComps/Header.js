@@ -50,7 +50,7 @@ export default function Example() {
               >
                 Join our beta
               </a>
-              <div className="relative  mb-5  top-6 mt-4">* all participants get a free website</div>
+              <div className="relative  mb-6  top-6 mt-4">* all participants get a free website</div>
             </div>
 
             </div>
