@@ -148,7 +148,7 @@ class BasicCube {
   }
 
   animate() {
-    this.uniforms.u_time.value += 0.001;
+    this.uniforms.u_time.value += 0.002;
 
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(() => this.animate());

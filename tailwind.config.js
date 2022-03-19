@@ -7,7 +7,7 @@ module.exports = {
         colors: {
           'default': 'rgb(99 102 241)',
           'bg': 'rgb(10 20 30)',
-          'orange': 'rgb(194 65 12)',
+          'orange': 'rgb(234 88 12)',
           'blue': 'rgb(15 118 110)'
         },
         backgroundImage: {
