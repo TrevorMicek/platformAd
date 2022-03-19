@@ -138,7 +138,7 @@ class BasicCube {
 
   createObj() {
     const mat = this.material;
-    const geometry = new THREE.PlaneGeometry(300, 500, 1, 1);
+    const geometry = new THREE.PlaneGeometry(400, 500, 1, 1);
 
     this.cube = new THREE.Mesh(geometry, mat);
     this.cube.position.y = 6;
