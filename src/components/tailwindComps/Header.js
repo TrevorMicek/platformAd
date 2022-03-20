@@ -1,15 +1,32 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
 import Gradient from '../commonComps/Gradient'
+import gradientImg from '../../images/gradient.jpg'
 export default function Example() {
+  const [wave, setWave] = useState([])
  useEffect(() => {
   new Gradient(document === 'undefined' ? undefined : document.querySelector('#app'));
+  setWave(true)
  }, [])
+ const Wave = () => {
+   useEffect(() => {
+    setWave(true)
+   }, [])
+   return (
+   <>
+   {
+     wave ? <div className="absolute -top-20 z-0 transform scale-x-150"  id="app"></div> : <img src={gradientImg} width="500px" height="300px" />
+
+   }
+   </>
+ )
+  }
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-<div className="absolute -top-20 z-0 transform scale-x-150"  id="app"></div>
 
+      {wave && <div className="absolute -top-20 z-0 transform scale-x-150"  id="app"></div>}
+      {!wave && <img src={gradientImg} width="500px" height="300px" />}
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
         <div className="relative z-30 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
