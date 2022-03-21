@@ -12,14 +12,20 @@ const gradient = new Gradient()
 // Call `initGradient` with the selector to your canvas
 
 export default function Example() {
+ const worker = () => new Worker(gradient.initGradient('#gradient-canvas'))
+  useEffect(() => {
+worker()
 
 
 
+
+  }, [])
 
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+     <canvas id="gradient-canvas" className="absolute -top-20 z-0 transform scale-x-150" data-transition-in>
+        </canvas>
 
-        <img src={waveImg} width="600px" height="200px" className="absolute z-0 width-11/12 h-full transform scale-x-150" />
 
 
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
