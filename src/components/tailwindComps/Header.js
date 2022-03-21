@@ -13,19 +13,22 @@ const gradient = new Gradient()
 
 export default function Example() {
 
-useEffect(() => {
+  useEffect(() => {
 
-  setTimeout(() => {
-    gradient.initGradient('#gradient-canvas')
-  }, 1000)
+    setTimeout(() => {
+      gradient.initGradient('#gradient-canvas')
+    }, 2000)
 
-}, [])
+  }, [])
+
 
 
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-   <canvas id="gradient-canvas" className="absolute -top-20 z-0 transform scale-x-150" data-transition-in>
+     <canvas id="gradient-canvas" className="absolute -top-20 z-0 transform scale-x-150" data-transition-in>
         </canvas>
+        <img src={waveImg} width="400px" height="200px" className="absolute -top-20 z-0 transform scale-x-150" />
+
 
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
       <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
