@@ -16,7 +16,7 @@ export default function Example() {
   useEffect(() => {
     setTimeout(() => {
       gradient.initGradient('#gradient-canvas')
-    }, 3000)
+    }, 2000)
 
 
 
@@ -27,7 +27,6 @@ export default function Example() {
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
       <canvas id="gradient-canvas" className="absolute -top-20 z-10 transform scale-x-150" data-transition-in>
   </canvas>
-    <img src={waveImg}  className="absolute -top-10 height-full  z-0 transform scale-x-150" />
 
 
 
