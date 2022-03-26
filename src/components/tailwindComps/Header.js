@@ -3,7 +3,7 @@ import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 import eclipse from '../../images/eclipseResize.jpg'
 
 import '../commonComps/style.css'
-import waveImg from '../../images/gradient.jpg'
+import waveImg from '../../images/wavePlacerCrop.png'
 import { Gradient } from '../commonComps/Gradient'
 
 // Create your instance
@@ -13,11 +13,10 @@ const gradient = new Gradient()
 
 export default function Example() {
 
-  const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {
     setTimeout(() => {
       gradient.initGradient('#gradient-canvas')
-    }, 5000)
+    }, 3000)
 
 
 
@@ -26,8 +25,10 @@ export default function Example() {
 
   return (
     <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
-      <canvas id="gradient-canvas" className="absolute -top-20 z-0 transform scale-x-150" data-transition-in>
+      <canvas id="gradient-canvas" className="absolute -top-20 z-10 transform scale-x-150" data-transition-in>
   </canvas>
+    <img src={waveImg}  className="absolute -top-10 height-full  z-0 transform scale-x-150" />
+
 
 
     <div className="bg-white pb-8 sm:pb-12 lg:pb-12">
