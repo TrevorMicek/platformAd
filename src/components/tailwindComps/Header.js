@@ -16,7 +16,7 @@ export default function Example() {
   useEffect(() => {
     setTimeout(() => {
       gradient.initGradient('#gradient-canvas')
-    }, 2000)
+    }, 2500)
 
 
 
