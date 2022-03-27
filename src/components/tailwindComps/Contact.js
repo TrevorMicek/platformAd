@@ -103,7 +103,7 @@ const onSubmit = (e) => {
           break;
 
         case location:
-            validateError(location, 'email')
+            validateError(location, 'location')
             e.preventDefault()
             break;
             case industry:
