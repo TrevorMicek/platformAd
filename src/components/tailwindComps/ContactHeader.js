@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
+import { Link } from 'gatsby'
 import eclipse from '../../images/eclipseResize.jpg'
 
 import '../commonComps/style.css'
@@ -24,7 +25,7 @@ export default function Example() {
   }, [])
 
   return (
-    <div className="-top-16 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
+    <div className="-top-16 pb-10 relative overflow-hidden" style={{gridColumn:"span 7", gridRowStart:"first", gridRowEnd:"second"}}>
       <canvas id="gradient-canvas" className="absolute -top-30 z-10 transform scale-x-150" data-transition-in>
   </canvas>
   <img src={waveImg} height="100px" width="auto" className="absolute  h-96 z-0 transform " />
@@ -36,11 +37,13 @@ export default function Example() {
         <div className="relative z-30 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
           <div>
             <div>
+                <Link to="/">
               <img
                 className="h-11 w-auto"
                 src={eclipse}
                 alt="Workflow"
               />
+              </Link>
             </div>
             <div className="mt-0">
 
@@ -60,19 +63,12 @@ export default function Example() {
                 <h1 className="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
                   Eclipse Builder
                 </h1>
-                <p className="mt-6 text-xl text-gray-200">
-                  Introducing: <span className="text-white">Eclipse Builder</span> - no code, beautiful components and faster page load times. 0 tech skills needed.
-                </p>
+                <h2 className="text-2xl font-normal text-white tracking-tight sm:text-5xl">
+                  Join our beta!
+                </h2>
+
               </div>
-              <div>
-              <a
-                href="/beta"
-                className="relative top-10 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange hover:bg-blue"
-              >
-                Join our beta
-              </a>
-              <div className="relative  mb-6  top-6 mt-4">* all participants get a free website</div>
-            </div>
+
 
             </div>
 
