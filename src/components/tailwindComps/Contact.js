@@ -84,6 +84,9 @@ const validateError = (label, which) => {
       case location:
           setValidateLocation(errorMessage)
           break;
+          case hear:
+      setValidateHear(errorMessage)
+      break;
       case industry:
           setValidateIndustry(errorMessage)
           break;
@@ -106,6 +109,10 @@ const onSubmit = (e) => {
             validateError(location, 'location')
             e.preventDefault()
             break;
+            case hear:
+      validateError(hear, 'found us')
+      e.preventDefault()
+      break;
             case industry:
           validateError(industry, 'industry');
           e.preventDefault()
@@ -116,7 +123,7 @@ const onSubmit = (e) => {
       default:
          /* setURL() */
          setConfirm(true)
-         emailjs.sendForm('service_arikqvn', 'template_ht51ufi', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
+         emailjs.sendForm('service_arikqvn', 'template_rhn47qn', e.target, 'user_kC0T8kmC4F1GOkt3Q06Q4')
          e.preventDefault()
   }
 }
@@ -255,6 +262,7 @@ const confirmMessage = ['Thanks for reaching out to Websites By Trevor!', 'We wi
                   type="text"
                   name="phone-number"
                   id="phone-number"
+                  value={number}
                   autoComplete="tel"
                   className="py-3 px-4 mb-6 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="+1 (555) 987-6543"
